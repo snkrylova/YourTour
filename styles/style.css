@@ -1,0 +1,96 @@
+:root {
+  --black: #1b1f2b;
+  --white: #fff;
+  --green-100: #e0f0e5;
+  --green-200: #627f7e;
+  --green-300: #3b7e7b;
+  --green-400: #286562;
+  --beige-100: #f9f7f4;
+  --beige-200: #f4f0e9;
+  --orange-100: #f8e6be;
+  --orange-200: #efa501;
+  --gray-300: #a6a6a6;
+  --gray-200: #d9dfdb;
+  --gray-100: #f1f3f2;
+}
+
+* {
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 142%;
+  text-decoration: none;
+}
+
+@media (width >= 360px) {
+  * {
+    font-size: 20px;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  width: 320px;
+}
+
+@media (width >= 360px) {
+  .container {
+    width: 910px;
+  }
+}
+
+@media (width >= 1024px) {
+  .container {
+    width: 1168px;
+  }
+}
+
+/* header start */
+
+.container__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 88px;
+}
+
+.logo {
+  width: 133px;
+  height: 22px;
+}
+
+@media (width >= 360px) {
+  .logo {
+    width: 181.84px;
+    height: 30.24px;
+  }
+}
+
+.nav__list {
+  display: none;
+  padding: 0;
+}
+
+@media (width >= 360px) {
+  .nav__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+}
+
+@media (width >= 1024px) {
+  .nav__list {
+    gap: 50px;
+  }
+}
+
+.nav__item {
+  list-style-type: none;
+}
+
+.contacts {
+  width: 155px;
+  height: 28px;
+}
+
+/* header finish */
