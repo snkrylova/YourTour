@@ -53,9 +53,13 @@ body {
   }
 }
 
-h1,
-p {
+h1 {
   margin: 0 auto;
+}
+
+p,
+ul {
+  margin: 0;
 }
 
 .container {
@@ -66,15 +70,27 @@ p {
 
 @media (width >= 360px) {
   .container {
-    width: 910px;
+    width: 918px;
     padding: 0 53px;
   }
 }
 
-@media (width >= 1024px) {
+@media (width > 1024px) {
   .container {
     width: 1168px;
   }
+}
+
+.text_white {
+  color: var(--white);
+}
+
+.text_gray {
+  color: var(--gray-300);
+}
+
+.text_black {
+  color: var(--black);
 }
 
 /* header start */
@@ -192,3 +208,100 @@ p {
 }
 
 /* hero finish */
+
+/* footer start */
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  padding: 21px 21.5px;
+}
+
+@media (width >= 360px) {
+  .footer__container {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+    padding: 30px 0;
+  }
+}
+
+.footer__address {
+  font-style: normal;
+}
+
+.footer__contacts {
+  display: flex;
+  gap: 15px;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+@media (width >= 360px) {
+  .footer__contacts {
+    gap: 25px;
+  }
+}
+
+.footer__link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+@media (width >= 360px) {
+  .footer__link {
+    gap: 10px;
+  }
+}
+
+.footer__link .text:hover {
+  border-bottom: 1px solid var(--black);
+}
+
+.footer__link::before {
+  content: "";
+}
+
+.footer__contact:nth-child(1) .footer__link::before {
+  width: 22px;
+  height: 22px;
+  background-image: url("../assets/icons/inst_small.png");
+}
+
+.footer__contact:nth-child(2) .footer__link::before {
+  width: 21px;
+  height: 21px;
+  background-image: url("../assets/icons/fb_small.png");
+}
+
+.footer__contact:nth-child(3) .footer__link::before {
+  width: 20px;
+  height: 20px;
+  background-image: url("../assets/icons/vk_small.png");
+}
+
+@media (width >= 360px) {
+  .footer__contact:nth-child(n) .footer__link::before {
+    width: 26px;
+    height: 26px;
+  }
+
+  .footer__contact:nth-child(1) .footer__link::before {
+    background-image: url("../assets/icons/inst_big.png");
+  }
+
+  .footer__contact:nth-child(2) .footer__link::before {
+    background-image: url("../assets/icons/fb_big.png");
+  }
+
+  .footer__contact:nth-child(3) .footer__link::before {
+    background-image: url("../assets/icons/vk_big.png");
+  }
+}
+
+/* footer finish */
