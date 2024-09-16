@@ -57,6 +57,7 @@ h1 {
   margin: 0 auto;
 }
 
+h2,
 p,
 ul {
   margin: 0;
@@ -65,7 +66,7 @@ ul {
 .container {
   margin: 0 auto;
   width: 320px;
-  padding: 0 20px;
+  /* padding: 0 20px; */
 }
 
 @media (width >= 360px) {
@@ -144,6 +145,30 @@ ul {
 
 /* header finish */
 
+/* main start */
+
+.main {
+  padding-bottom: 75px;
+}
+
+@media (width >= 360px) {
+  .main {
+    padding-bottom: 135px;
+  }
+}
+
+.main__container {
+  display: flex;
+  flex-direction: column;
+  gap: 75px;
+}
+
+@media (width >= 360px) {
+  .main__container {
+    gap: 135px;
+  }
+}
+
 /* hero start */
 
 .hero {
@@ -209,6 +234,86 @@ ul {
 
 /* hero finish */
 
+/* contact start */
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+@media (width >= 360px) {
+  .contact {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.contact__img {
+  width: 130px;
+  height: 133px;
+  margin: 0 auto;
+
+  background-image: url("../assets/images/contact\ photo.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}
+
+@media (width >= 360px) {
+  .contact__img {
+    width: 370px;
+    height: 370px;
+    margin: 0;
+
+    background-size: 100% 100%;
+    border-radius: 50px;
+  }
+}
+
+.contact__text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  text-align: center;
+}
+
+@media (width >= 360px) {
+  .contact__text {
+    width: 371px;
+
+    text-align: left;
+  }
+}
+
+.contact__subtitle {
+  order: 1;
+
+  font-size: 35px;
+  line-height: 122%;
+}
+
+@media (width >= 360px) {
+  .contact__subtitle {
+    order: 0;
+  }
+}
+
+.contact__link:hover {
+  border-bottom: 1px solid var(--black);
+}
+
+.contact__link:active {
+  color: var(--green-400);
+  border-bottom: 1px solid var(--green-400);
+}
+
+/* contact finish */
+
+/* main finish */
+
 /* footer start */
 
 .footer__container {
@@ -261,6 +366,11 @@ ul {
 
 .footer__link .text:hover {
   border-bottom: 1px solid var(--black);
+}
+
+.footer__link .text:active {
+  color: var(--green-400);
+  border-bottom: 1px solid var(--green-400);
 }
 
 .footer__link::before {
