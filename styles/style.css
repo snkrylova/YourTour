@@ -18,15 +18,8 @@
   box-sizing: border-box;
 
   font-family: var(--font-family);
-  font-size: 16px;
-  line-height: 142%;
-  text-decoration: none;
-}
 
-@media (width >= 360px) {
-  * {
-    font-size: 20px;
-  }
+  transition: background-color 0.4s ease;
 }
 
 body {
@@ -65,20 +58,30 @@ ul {
 
 .container {
   margin: 0 auto;
-  width: 320px;
+  min-width: 320px;
+  max-width: 1170px;
   /* padding: 0 20px; */
 }
 
-@media (width >= 360px) {
+/* @media (min-width: 768px) {
+  ДОПУСТИМ САМОДЕЯТЕЛЬНОСТЬ?
+  .container {
+    width: 688px;
+  }
+} */
+
+/* @media (width >= 360px) */
+@media (min-width: 1024px) {
   .container {
     width: 918px;
     /* padding: 0 53px; */
   }
 }
 
-@media (width > 1024px) {
+/* @media (width > 1024px) */
+@media (min-width: 1920px) {
   .container {
-    width: 1168px;
+    width: 1170px;
   }
 }
 
@@ -99,10 +102,12 @@ ul {
   letter-spacing: 0.04em;
 }
 
-@media (width >= 360px) {
+/* @media (width >= 360px) */
+@media (min-width: 1024px) {
   .heading_2 {
     font-size: 59px;
     line-height: 124%;
+    letter-spacing: normal;
   }
 
   .heading_3 {
@@ -110,6 +115,24 @@ ul {
     font-size: 23px;
     line-height: 120%;
     letter-spacing: 0.04em;
+  }
+}
+
+.text {
+  font-size: 16px;
+  line-height: 142%;
+  text-decoration: none;
+}
+
+/* @media (width >= 360px) */
+@media (min-width: 1024px) {
+  .text {
+    font-size: 20px;
+  }
+
+  .text_small {
+    font-size: 17px;
+    letter-spacing: -0.01em;
   }
 }
 
@@ -129,10 +152,33 @@ ul {
   font-weight: 700;
 }
 
-@media (width >= 360px) {
+/* @media (width >= 360px) */
+@media (min-width: 1024px) {
   .text_bold {
     font-weight: 500;
   }
+}
+
+.link {
+  text-decoration: none;
+}
+
+.link_white:hover {
+  border-bottom: 1px solid var(--white);
+}
+
+.link_white:active {
+  color: var(--orange-200);
+  border-bottom: 1px solid var(--orange-200);
+}
+
+.link_black:hover {
+  border-bottom: 1px solid var(--black);
+}
+
+.link_black:active {
+  color: var(--green-400);
+  border-bottom: 1px solid var(--green-400);
 }
 
 /* header start */
@@ -192,7 +238,8 @@ ul {
   padding-bottom: 75px;
 }
 
-@media (width >= 360px) {
+/* @media (width >= 360px) */
+@media (min-width: 1024px) {
   .main {
     padding-bottom: 135px;
   }
@@ -204,7 +251,8 @@ ul {
   gap: 75px;
 }
 
-@media (width >= 360px) {
+/* @media (width >= 360px) */
+@media (min-width: 1024px) {
   .main__container {
     gap: 135px;
   }
@@ -218,7 +266,8 @@ ul {
   width: 100%;
 }
 
-@media (width >= 360px) {
+/* @media (width >= 360px) */
+@media (min-width: 1024px) {
   .intro-section {
     width: 529px;
   }
@@ -226,16 +275,29 @@ ul {
 
 .intro-section p {
   margin-top: 20px;
-  margin-bottom: 50px;
+  /* margin-bottom: 40px; */
+  /*  margin-bottom: 50px; */ /* исправить отступы, сделать для родительского блока! */
 
   text-align: center;
 }
 
-@media (width >= 360px) {
+/* @media (width >= 360px) */
+@media (min-width: 1024px) {
   .intro-section p {
     margin-top: 30px;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
     width: 79%;
+  }
+}
+
+.intro-section_small {
+  padding-bottom: 40px;
+}
+
+/* @media (width >= 360px) */
+@media (min-width: 1024px) {
+  .intro-section_small {
+    padding-bottom: 100px;
   }
 }
 
@@ -303,6 +365,374 @@ ul {
 }
 
 /* hero finish */
+
+/* collect-tour start */
+
+.collect-tour__form {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(6, 74px) auto;
+  row-gap: 30px;
+  padding: 20px 20px 40px;
+
+  border-radius: 30px;
+  background-color: var(--white);
+}
+
+/* @media (width >= 360px) */
+@media (min-width: 1024px) {
+  .collect-tour__form {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 104px) auto;
+    row-gap: 33px;
+    column-gap: 20px;
+    padding: 60px;
+  }
+}
+
+/* @media (width >= 1024px) */
+@media (min-width: 1920px) {
+  .collect-tour__form {
+    column-gap: 30px;
+    padding: 70px;
+  }
+}
+
+.form__group {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+
+  border: none;
+  border-radius: 0;
+}
+
+.form__element {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.form__input-field {
+  padding: 10px;
+  /* width: 278px; */
+  width: 100%;
+  height: 43px;
+
+  background: var(--beige-100);
+  border: 1px solid var(--beige-200);
+  border-radius: 10px;
+}
+
+/* @media (width >= 360px) */
+@media (min-width: 1024px) {
+  .form__input-field {
+    padding: 20px;
+    height: 68px;
+  }
+}
+
+/* @media (width >= 1024px) {
+  .form__input-field {
+    width: 500px;
+  }
+} */
+
+.form__input-field::placeholder {
+  color: var(--gray-300);
+}
+
+.form__input-field:valid {
+  color: var(--black);
+}
+
+.form__input-field:focus {
+  background: var(--beige-200);
+  border: 1px solid var(--gray-300);
+  outline: none; /* убрать стандартное выделение браузера при фокусе */
+}
+
+.form__input-field:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 2em var(--beige-100) inset;
+  box-shadow: 0 0 0 2em var(--beige-100) inset; /* для других браузеров */
+}
+
+.form__input-field:-moz-autofill {
+  background-color: var(--beige-100) !important;
+  color: #000 !important;
+}
+
+.form__custom-select {
+  position: relative;
+  width: 100%;
+}
+
+.form__select {
+  /*  padding: 10px;
+  width: 278px;
+  height: 43px;
+
+  background: var(--beige-100);
+  border: 1px solid var(--beige-200);
+  border-radius: 10px; */
+
+  /* border: none; */
+
+  /*  width: 100%; */
+
+  appearance: none; /* Убираем стандартный вид */
+  -moz-appearance: none; /* Убираем стандартный вид для Firefox */
+  -webkit-appearance: none; /* Убираем стандартный вид для Safari */
+}
+
+.arrow-down {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+
+  width: 26px;
+  height: 26px;
+
+  transform: translateY(-50%);
+
+  pointer-events: none;
+  cursor: pointer;
+}
+
+.form__input-date {
+  -webkit-appearance: none; /* убрать стандартный стиль для WebKit браузеров */
+  -moz-appearance: textfield; /* убрать стандартный стиль для Firefox */
+  appearance: none; /* убрать стандартный стиль */
+
+  text-transform: uppercase;
+  letter-spacing: -0.035em;
+}
+
+.form__input-date::-webkit-calendar-picker-indicator {
+  display: none; /* Скрывает значок календаря и спиннеры в WebKit браузерах */
+}
+
+/* @media (width >= 360px) */
+@media (min-width: 1024px) {
+  .form__container-comment {
+    grid-column: span 2;
+  }
+}
+
+.form__input-comment {
+  /* width: 278px; */
+  height: 132px;
+  resize: none;
+}
+
+/* @media (width >= 360px) */
+@media (min-width: 1024px) {
+  .form__input-comment {
+    height: 152px;
+  }
+}
+
+/*
+@media (width >= 1024px) {
+  .form__input-comment {
+    width: 1030px;
+    height: 152px;
+  }
+} */
+
+.form__container-radio-buttons {
+  height: 54px;
+}
+
+/* @media (width >= 360px) */
+@media (min-width: 1024px) {
+  .form__container-radio-buttons {
+    grid-column: span 2;
+    height: 64px;
+  }
+}
+
+.form__radio-buttons {
+  display: flex;
+  gap: 30px;
+}
+
+/* @media (width >= 360px) */
+@media (min-width: 1024px) {
+  .form__radio-buttons {
+    gap: 31px;
+  }
+}
+
+.form__radio-button {
+  display: flex;
+  gap: 10px;
+}
+
+/* @media (width >= 360px) */
+@media (min-width: 1024px) {
+  .form__radio-button {
+    gap: 11px;
+  }
+}
+
+.form__radio-button input[type="radio"] {
+  display: none;
+}
+
+.form__custom-radio-button {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* @media (width >= 360px) */
+@media (min-width: 1024px) {
+  .form__custom-radio-button {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+.form__custom-radio-button-check {
+  opacity: 0;
+}
+
+.form__radio-button
+  input[type="radio"]:checked
+  + .form__custom-radio-button
+  .form__custom-radio-button-check {
+  opacity: 1;
+}
+
+/* @media (width >= 360px) */
+@media (min-width: 1024px) {
+  .form__container-checkbox {
+    grid-column: span 2;
+  }
+}
+
+.form__checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  height: 69px;
+}
+
+/* @media (width >= 360px) */
+@media (min-width: 1024px) {
+  .form__checkbox {
+    align-items: center;
+    gap: 11px;
+    height: 26px;
+  }
+}
+
+/* @media (width >= 1024px) */
+@media (min-width: 1920px) {
+  .form__checkbox {
+    gap: 19px;
+  }
+}
+
+.form__checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.form__custom-checkbox {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+
+  cursor: pointer;
+}
+
+/* @media (width >= 360px) */
+@media (min-width: 1024px) {
+  .form__custom-checkbox {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+.form__custom-checkbox-check {
+  opacity: 0;
+}
+
+.form__checkbox
+  input[type="checkbox"]:checked
+  + .form__custom-checkbox
+  .form__custom-checkbox-check {
+  opacity: 1;
+}
+
+/* .form__checkbox-text {
+  font-size: 17px;
+  line-height: 142%;
+  letter-spacing: -0.01em;
+} */
+
+.form__buttons {
+  display: flex;
+  gap: 10px;
+  height: 47px;
+}
+
+/* @media (width >= 360px) */
+@media (min-width: 1024px) {
+  .form__buttons {
+    height: 58px;
+    gap: 30px;
+  }
+}
+
+.form__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 30px;
+  width: 134px;
+  /*  height: 47px; */
+
+  border-radius: 10px;
+  border: none;
+}
+
+/* @media (width >= 360px) */
+@media (min-width: 1024px) {
+  .form__button {
+    width: 235px;
+  }
+}
+
+.form__button_submit {
+  background: var(--green-400);
+  color: var(--white);
+}
+
+.form__button_submit:hover {
+  background: var(--green-300);
+}
+
+.form__button_submit:active {
+  background: var(--green-200);
+}
+
+.form__button_reset {
+  background: var(--green-100);
+  color: var(--green-400);
+}
+
+.form__button_reset:hover {
+  background: var(--gray-100);
+}
+
+.form__button_reset:active {
+  background: var(--gray-200);
+}
+
+/* collect-tour finish */
 
 /* reviews start */
 
