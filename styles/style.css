@@ -1109,83 +1109,103 @@ ul {
 
 /* photos start */
 
-.photos__cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
+.photos__gallery {
+  display: grid;
+  /* grid-template-columns: 1; */
+  grid-template-rows: repeat(3, 110px);
+  row-gap: 18px;
 }
 
-@media (width >= 360px) {
-  .photos__cards {
-    column-gap: 20px;
+@media (min-width: 1024px) {
+  .photos__gallery {
+    grid-template-rows: repeat(3, 300px);
     row-gap: 30px;
+    margin-left: -33px;
+    margin-right: -33px;
   }
 }
 
-@media (width >= 1024px) {
-  .photos__cards {
+@media (min-width: 1920px) {
+  .photos__gallery {
+    margin-left: -345px;
+    margin-right: -345px;
+  }
+}
+
+.photos__gallery-row {
+  display: grid;
+}
+
+.photos__gallery-row_odd {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.photos__gallery-row_even {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+@media (min-width: 1024px) {
+  .photos__gallery-row_odd {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .photos__gallery-row_even {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .photos__gallery-row_odd {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+
+  .photos__gallery-row_even {
+    grid-template-columns: repeat(5, 1fr);
     gap: 30px;
   }
 }
 
-.photos__line1 {
-  width: 150px;
-  height: 110px;
+.photos__gallery-item {
+  position: relative;
+  overflow: hidden;
 }
 
-.photos__line2 {
-  width: 99px;
-  height: 110px;
+.hidden {
+  display: none;
 }
 
-.photos__line3 {
-  width: 154px;
-  height: 110px;
-}
-
-@media (width >= 360px) {
-  .photos__card {
-    border-radius: 50px;
-  }
-
-  .photos__line1,
-  .photos__line3 {
-    width: 314px;
-    height: 300px;
-  }
-
-  .photos__line2 {
-    width: 231px;
-    height: 301px;
+@media (min-width: 1024px) {
+  .photos__gallery-item_hidden-1024 {
+    display: block;
   }
 }
 
-@media (width >= 1024px) {
-  .photos__line1 {
-    width: 444px;
-    height: 301px;
-  }
-
-  .photos__line2 {
-    width: 349px;
-    height: 301px;
-  }
-
-  .photos__line3 {
-    width: 442px;
-    height: 300px;
+@media (min-width: 1920px) {
+  .photos__gallery-item_hidden-1920 {
+    display: block;
   }
 }
 
-.photos__img {
+.photos__gallery-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   width: 100%;
   height: 100%;
+
+  object-fit: cover;
+  transform: translate(-50%, -50%);
 
   border-radius: 20px;
 }
 
-@media (width >= 360px) {
-  .photos__img {
+@media (min-width: 1024px) {
+  .photos__gallery-img {
     border-radius: 50px;
   }
 }
