@@ -1,4 +1,8 @@
 :root {
+  --font-regular: "Roboto Regular", sans-serif;
+  --font-medium: "Roboto Medium", sans-serif;
+  --font-bold: "Roboto Bold", sans-serif;
+
   --black: #1b1f2b;
   --white: #fff;
   --green-100: #e0f0e5;
@@ -22,7 +26,7 @@
 * {
   box-sizing: border-box;
 
-  font-family: var(--font-family);
+  font-family: var(--font-regular);
 
   transition: background-color 0.4s ease; /* навесить только на нужное */
 }
@@ -81,7 +85,7 @@ ul {
 .heading {
   margin: 0;
 
-  font-weight: 700;
+  font-family: var(--font-bold);
   text-align: center;
 }
 
@@ -123,7 +127,7 @@ ul {
   }
 
   .heading_3 {
-    font-weight: 500;
+    font-family: var(--font-medium);
     font-size: 35px;
     line-height: 122%;
     letter-spacing: normal;
@@ -133,7 +137,6 @@ ul {
 .text {
   font-size: 16px;
   line-height: 142%;
-  font-weight: 400;
   text-decoration: none;
 }
 
@@ -161,7 +164,7 @@ ul {
 }
 
 .text_bold {
-  font-weight: 700;
+  font-family: var(--font-bold);
 }
 
 @media (min-width: 1024px) {
@@ -171,13 +174,13 @@ ul {
   }
 
   .choose-tour__item .text_bold {
-    font-weight: 700;
+    font-family: var(--font-bold);
   }
 }
 
 @media (min-width: 1024px) {
   .text_bold {
-    font-weight: 500;
+    font-family: var(--font-medium);
   }
 }
 
@@ -1054,7 +1057,7 @@ ul {
 
 @media (width >= 360px) {
   .reviews__comment p {
-    font-weight: 700;
+    font-family: var(--font-bold);
     font-size: 23px;
     line-height: 122%;
   }
@@ -1325,7 +1328,7 @@ ul {
 
   .contact__heading {
     font-size: 35px;
-    font-weight: 500;
+    font-family: var(--font-medium);
     line-height: 122%;
     letter-spacing: 0;
     text-align: left;
