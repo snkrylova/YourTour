@@ -32,7 +32,7 @@
 }
 
 body {
-  /*   background: url("../assets/images/header-img.png") no-repeat center/contain,
+  /*  background: url("../assets/images/header-img.png") no-repeat center/contain,
     linear-gradient(
       var(--beige-100) 488px 8096px,
       var(--beige-200) 8096px 8184px
@@ -40,11 +40,15 @@ body {
   background-size: 100vw 488px, 100vw 7696px;
   background-position: top, bottom; */
 
+  /*   background: url("../assets/images/header-img.png") no-repeat center/contain;
+  background-size: 100vw 488px;
+  background-position: top; */
+
   overflow-x: hidden;
   width: 100vw;
 }
-
-/* @media (width >= 360px) {
+/* 
+@media (min-width: 1024px) {
   body {
     background: url("../assets/images/header-img.png") no-repeat center/contain,
       linear-gradient(
@@ -63,6 +67,8 @@ ul {
 }
 
 .container {
+  /* position: relative; */
+
   margin: 0 auto;
   min-width: 320px;
   padding: 0 21px;
@@ -73,6 +79,10 @@ ul {
     width: 918px;
     padding: 0 53px;
   }
+
+  /*  .container::before {
+    height: 831px;
+  } */
 }
 
 @media (min-width: 1920px) {
@@ -216,6 +226,22 @@ ul {
   }
 }
 
+.header-hero-wrapper {
+  position: relative;
+}
+
+.header-hero-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  height: 100%;
+  background: url("../assets/images/header-img.png") no-repeat center/cover;
+  z-index: -1;
+}
+
 /* header start */
 
 .header__container {
@@ -283,7 +309,22 @@ ul {
 /* main start */
 
 .main {
+  position: relative;
+
   padding-bottom: 75px;
+}
+
+.main::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  z-index: -1;
+
+  margin-left: -50vw;
+  width: 100vw;
+  height: 100%;
+
+  background-color: var(--beige-100);
 }
 
 @media (min-width: 1024px) {
@@ -350,6 +391,28 @@ ul {
 } */
 
 /* hero start */
+
+/* .header,
+.hero {
+  position: relative;
+  z-index: 1;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  background: url("/assets/images/header-img.png") no-repeat center/cover;
+  z-index: -1;
+} */
 
 .hero {
   display: flex;
@@ -1359,6 +1422,23 @@ ul {
 /* main finish */
 
 /* footer start */
+
+.footer {
+  position: relative;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  z-index: -1;
+
+  margin-left: -50vw;
+  width: 100vw;
+  height: 100%;
+
+  background-color: var(--beige-200);
+}
 
 .footer__container {
   display: flex;

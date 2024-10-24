@@ -30,37 +30,35 @@
   </head>
 
   <body>
-    <!-- <header class="header">
-      <div class="container header__container">
-        <div class="logo">
-          <a href="#" class="logo__link">
-            <img
-              src="assets/icons/logo.svg"
-              alt="Логотип YourTour"
-              class="logo__img"
-            />
-          </a>
-        </div>
+    <div class="container">
+      <div class="header-hero-wrapper">
+        <header class="header">
+          <div class="header__container">
+            <div class="logo">
+              <a href="#" class="logo__link">
+                <img
+                  src="assets/icons/logo.svg"
+                  alt="Логотип YourTour"
+                  class="logo__img"
+                />
+              </a>
+            </div>
+            <nav class="nav">
+              <ul class="nav__list">
+                <li class="nav__item"><a href="#">Туры</a></li>
+                <li class="nav__item"><a href="#">Создать тур</a></li>
+                <li class="nav__item"><a href="#">Отзывы</a></li>
+                <li class="nav__item"><a href="#">Истории</a></li>
+              </ul>
+            </nav>
+            <div class="contacts">
+              <a href="tel:+79999999999" class="contacts__telephone"
+                >+7 999 999 99 99</a
+              >
+            </div>
+          </div>
+        </header>
 
-        <nav class="nav">
-          <ul class="nav__list">
-            <li class="nav__item"><a href="#">Туры</a></li>
-            <li class="nav__item"><a href="#">Создать тур</a></li>
-            <li class="nav__item"><a href="#">Отзывы</a></li>
-            <li class="nav__item"><a href="#">Истории</a></li>
-          </ul>
-        </nav>
-
-        <div class="contacts">
-          <a href="tel:+79999999999" class="contacts__telephone"
-            >+7 999 999 99 99</a
-          >
-        </div>
-      </div>
-    </header> -->
-
-    <main class="main">
-      <div class="container main__container">
         <section class="hero">
           <h1 class="heading heading_1">
             Идеальные <br />
@@ -75,202 +73,343 @@
             ><span class="text text_small text_black">Найти тур</span></a
           >
         </section>
+      </div>
 
-        <section class="choose-tour">
-          <div class="intro-section choose-tour__intro-section">
-            <h2 class="heading heading_2">Выбери свой тур</h2>
-
-            <nav class="choose-tour__nav">
-              <ul class="choose-tour__list">
-                <li class="choose-tour__item">
-                  <button
-                    class="choose-tour__button choose-tour__button_active"
-                    onclick="toggleActiveButton(this)"
-                  >
-                    <span class="text text_big text_black">Популярные</span>
-                  </button>
-                </li>
-                <li class="choose-tour__item">
-                  <button
-                    class="choose-tour__button"
-                    onclick="toggleActiveButton(this)"
-                  >
-                    <span class="text text_big text_black">Авторские</span>
-                  </button>
-                </li>
-                <li class="choose-tour__item">
-                  <button
-                    class="choose-tour__button"
-                    onclick="toggleActiveButton(this)"
-                  >
-                    <span class="text text_big text_black">Походы</span>
-                  </button>
-                </li>
-                <li class="choose-tour__item">
-                  <button
-                    class="choose-tour__button"
-                    onclick="toggleActiveButton(this)"
-                  >
-                    <span class="text text_big text_black">Сплавы</span>
-                  </button>
-                </li>
-                <li class="choose-tour__item">
-                  <button
-                    class="choose-tour__button"
-                    onclick="toggleActiveButton(this)"
-                  >
-                    <span class="text text_big text_black">Велопрогулки</span>
-                  </button>
-                </li>
-              </ul>
-            </nav>
-          </div>
-
-          <script>
-            function toggleActiveButton(activeButton) {
-              document
-                .querySelectorAll(".choose-tour__button")
-                .forEach((button) => {
-                  button.classList.toggle(
-                    "choose-tour__button_active",
-                    button === activeButton
-                  );
-                });
-            }
-          </script>
-
-          <div class="choose-tour__cards">
-            <a
-              href="#"
-              class="choose-tour__card choose-tour__card_1 link"
-              target="_blank"
+      <main class="main">
+        <div class="main__container">
+          <section class="choose-tour">
+            <div class="intro-section choose-tour__intro-section">
+              <h2 class="heading heading_2">Выбери свой тур</h2>
+              <nav class="choose-tour__nav">
+                <ul class="choose-tour__list">
+                  <li class="choose-tour__item">
+                    <button
+                      class="choose-tour__button choose-tour__button_active"
+                      onclick="toggleActiveButton(this)"
+                    >
+                      <span class="text text_big text_black">Популярные</span>
+                    </button>
+                  </li>
+                  <li class="choose-tour__item">
+                    <button
+                      class="choose-tour__button"
+                      onclick="toggleActiveButton(this)"
+                    >
+                      <span class="text text_big text_black">Авторские</span>
+                    </button>
+                  </li>
+                  <li class="choose-tour__item">
+                    <button
+                      class="choose-tour__button"
+                      onclick="toggleActiveButton(this)"
+                    >
+                      <span class="text text_big text_black">Походы</span>
+                    </button>
+                  </li>
+                  <li class="choose-tour__item">
+                    <button
+                      class="choose-tour__button"
+                      onclick="toggleActiveButton(this)"
+                    >
+                      <span class="text text_big text_black">Сплавы</span>
+                    </button>
+                  </li>
+                  <li class="choose-tour__item">
+                    <button
+                      class="choose-tour__button"
+                      onclick="toggleActiveButton(this)"
+                    >
+                      <span class="text text_big text_black">Велопрогулки</span>
+                    </button>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <script>
+              function toggleActiveButton(activeButton) {
+                document
+                  .querySelectorAll(".choose-tour__button")
+                  .forEach((button) => {
+                    button.classList.toggle(
+                      "choose-tour__button_active",
+                      button === activeButton
+                    );
+                  });
+              }
+            </script>
+            <div class="choose-tour__cards">
+              <a
+                href="#"
+                class="choose-tour__card choose-tour__card_1 link"
+                target="_blank"
+              >
+                <div class="choose-tour__card-content">
+                  <h3 class="heading heading_3">Путешествие в&nbsp;горы</h3>
+                  <p class="text text_small text_white">
+                    от&nbsp;80&nbsp;000 руб
+                  </p>
+                </div>
+                <span class="link-more text text_big text_white"
+                  >Подробнее</span
+                >
+              </a>
+              <a
+                href="#"
+                class="choose-tour__card choose-tour__card_2 link"
+                target="_blank"
+              >
+                <div class="choose-tour__card-content">
+                  <h3 class="heading heading_3">Путешествие в&nbsp;горы</h3>
+                  <p class="text text_small text_white">
+                    от&nbsp;80&nbsp;000 руб
+                  </p>
+                </div>
+                <span class="link-more text text_big text_white"
+                  >Подробнее</span
+                >
+              </a>
+              <a
+                href="#"
+                class="choose-tour__card choose-tour__card_3 link"
+                target="_blank"
+              >
+                <div class="choose-tour__card-content">
+                  <h3 class="heading heading_3">Путешествие в&nbsp;горы</h3>
+                  <p class="text text_small text_white">
+                    от&nbsp;80&nbsp;000 руб
+                  </p>
+                </div>
+                <span class="link-more text text_big text_white"
+                  >Подробнее</span
+                >
+              </a>
+              <a
+                href="#"
+                class="choose-tour__card choose-tour__card_4 link"
+                target="_blank"
+              >
+                <div class="choose-tour__card-content">
+                  <h3 class="heading heading_3">Путешествие в&nbsp;горы</h3>
+                  <p class="text text_small text_white">
+                    от&nbsp;80&nbsp;000 руб
+                  </p>
+                </div>
+                <span class="link-more text text_big text_white"
+                  >Подробнее</span
+                >
+              </a>
+              <a
+                href="#"
+                class="choose-tour__card choose-tour__card_5 link"
+                target="_blank"
+              >
+                <div class="choose-tour__card-content">
+                  <h3 class="heading heading_3">Путешествие в&nbsp;горы</h3>
+                  <p class="text text_small text_white">
+                    от&nbsp;80&nbsp;000 руб
+                  </p>
+                </div>
+                <span class="link-more text text_big text_white"
+                  >Подробнее</span
+                >
+              </a>
+              <a
+                href="#"
+                class="choose-tour__card choose-tour__card_6 link"
+                target="_blank"
+              >
+                <div class="choose-tour__card-content">
+                  <h3 class="heading heading_3">Путешествие в&nbsp;горы</h3>
+                  <p class="text text_small text_white">
+                    от&nbsp;80&nbsp;000 руб
+                  </p>
+                </div>
+                <span class="link-more text text_big text_white"
+                  >Подробнее</span
+                >
+              </a>
+            </div>
+          </section>
+          <section class="collect-tour">
+            <div class="intro-section intro-section_small">
+              <h2 class="heading heading_2">Собери свой тур</h2>
+              <p class="text text_gray">
+                Идейные соображения высшего порядка, а&nbsp;также рамки
+                и&nbsp;место обучения кадров
+              </p>
+            </div>
+            <form
+              action="#"
+              class="collect-tour__form"
+              method="post"
+              name="collectTourForm"
+              autocomplete="on"
             >
-              <div class="choose-tour__card-content">
-                <h3 class="heading heading_3">Путешествие в&nbsp;горы</h3>
-                <p class="text text_small text_white">
-                  от&nbsp;80&nbsp;000 руб
-                </p>
-              </div>
-              <span class="link-more text text_big text_white">Подробнее</span>
-            </a>
-
-            <a
-              href="#"
-              class="choose-tour__card choose-tour__card_2 link"
-              target="_blank"
-            >
-              <div class="choose-tour__card-content">
-                <h3 class="heading heading_3">Путешествие в&nbsp;горы</h3>
-                <p class="text text_small text_white">
-                  от&nbsp;80&nbsp;000 руб
-                </p>
-              </div>
-              <span class="link-more text text_big text_white">Подробнее</span>
-            </a>
-
-            <a
-              href="#"
-              class="choose-tour__card choose-tour__card_3 link"
-              target="_blank"
-            >
-              <div class="choose-tour__card-content">
-                <h3 class="heading heading_3">Путешествие в&nbsp;горы</h3>
-                <p class="text text_small text_white">
-                  от&nbsp;80&nbsp;000 руб
-                </p>
-              </div>
-              <span class="link-more text text_big text_white">Подробнее</span>
-            </a>
-
-            <a
-              href="#"
-              class="choose-tour__card choose-tour__card_4 link"
-              target="_blank"
-            >
-              <div class="choose-tour__card-content">
-                <h3 class="heading heading_3">Путешествие в&nbsp;горы</h3>
-                <p class="text text_small text_white">
-                  от&nbsp;80&nbsp;000 руб
-                </p>
-              </div>
-              <span class="link-more text text_big text_white">Подробнее</span>
-            </a>
-
-            <a
-              href="#"
-              class="choose-tour__card choose-tour__card_5 link"
-              target="_blank"
-            >
-              <div class="choose-tour__card-content">
-                <h3 class="heading heading_3">Путешествие в&nbsp;горы</h3>
-                <p class="text text_small text_white">
-                  от&nbsp;80&nbsp;000 руб
-                </p>
-              </div>
-              <span class="link-more text text_big text_white">Подробнее</span>
-            </a>
-
-            <a
-              href="#"
-              class="choose-tour__card choose-tour__card_6 link"
-              target="_blank"
-            >
-              <div class="choose-tour__card-content">
-                <h3 class="heading heading_3">Путешествие в&nbsp;горы</h3>
-                <p class="text text_small text_white">
-                  от&nbsp;80&nbsp;000 руб
-                </p>
-              </div>
-              <span class="link-more text text_big text_white">Подробнее</span>
-            </a>
-          </div>
-        </section>
-
-        <section class="collect-tour">
-          <div class="intro-section intro-section_small">
-            <h2 class="heading heading_2">Собери свой тур</h2>
-            <p class="text text_gray">
-              Идейные соображения высшего порядка, а&nbsp;также рамки
-              и&nbsp;место обучения кадров
-            </p>
-          </div>
-
-          <form
-            action="#"
-            class="collect-tour__form"
-            method="post"
-            name="collectTourForm"
-            autocomplete="on"
-          >
-            <fieldset class="form__group">
-              <label class="form__element text text_black">
-                Имя
-                <input
-                  type="text"
-                  name="name"
-                  class="form__input-field text text_gray"
-                  placeholder="Введите Ваше имя"
-                  required
-              /></label>
-            </fieldset>
-
-            <fieldset class="form__group">
-              <label class="form__element text text_black">
-                Направление
-                <div class="form__custom-select">
-                  <select
-                    name="destinationTour"
-                    class="form__input-field form__select"
-                  >
-                    <option value="" disabled selected hidden>
-                      Куда хотите ехать
-                    </option>
-                    <option value="1">Опция 1</option>
-                    <option value="2">Опция 2</option>
-                    <option value="3">Опция 3</option>
-                  </select>
-
-                  <span class="arrow-down">
+              <fieldset class="form__group">
+                <label class="form__element text text_black">
+                  Имя
+                  <input
+                    type="text"
+                    name="name"
+                    class="form__input-field text text_gray"
+                    placeholder="Введите Ваше имя"
+                    required
+                /></label>
+              </fieldset>
+              <fieldset class="form__group">
+                <label class="form__element text text_black">
+                  Направление
+                  <div class="form__custom-select">
+                    <select
+                      name="destinationTour"
+                      class="form__input-field form__select"
+                    >
+                      <option value="" disabled selected hidden>
+                        Куда хотите ехать
+                      </option>
+                      <option value="1">Опция 1</option>
+                      <option value="2">Опция 2</option>
+                      <option value="3">Опция 3</option>
+                    </select>
+                    <span class="arrow-down">
+                      <svg
+                        viewBox="0 0 26 26"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M13 19.4143L4.29289 10.7072C3.90236 10.3167 3.90237 9.68351 4.29289 9.29298C4.68341 8.90246 5.31658 8.90246 5.7071 9.29298L13 16.5859L20.2929 9.29298C20.6834 8.90246 21.3166 8.90246 21.7071 9.29298C22.0976 9.68351 22.0976 10.3167 21.7071 10.7072L13 19.4143Z"
+                          fill="#1B1F2B"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </label>
+                <!--    <script>
+                  const selectElement = document.getElementById("form__select");
+                  const optionElement = document.querySelectorAll("option");
+                  selectElement.addEventListener("change", function () {
+                    optionElement.style.color = "var(--black)";
+                  });
+                </script> -->
+              </fieldset>
+              <fieldset class="form__group">
+                <label class="form__element text text_black">
+                  Email
+                  <input
+                    type="email"
+                    name="email"
+                    class="form__input-field text text_gray"
+                    placeholder="example@mail.com"
+                    required
+                  />
+                </label>
+              </fieldset>
+              <fieldset class="form__group">
+                <label class="form__element text text_black">
+                  Телефон
+                  <input
+                    type="tel"
+                    name="tel"
+                    class="form__input-field text text_gray"
+                    placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _"
+                    pattern="^(\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}|7\d{10})$"
+                    required
+                  />
+                </label>
+              </fieldset>
+              <fieldset class="form__group">
+                <label class="form__element text text_black">
+                  Дата от
+                  <input
+                    type="date"
+                    name="date-from"
+                    class="form__input-field form__input-date text text_gray"
+                    required
+                /></label>
+              </fieldset>
+              <fieldset class="form__group">
+                <label class="form__element text text_black">
+                  Дата до
+                  <input
+                    type="date"
+                    name="date-before"
+                    class="form__input-field form__input-date text text_gray"
+                    required
+                /></label>
+              </fieldset>
+              <fieldset class="form__group form__container-comment">
+                <label class="form__element text text_black">
+                  Комментарий
+                  <textarea
+                    name="comment"
+                    class="form__input-field form__input-comment text text_black"
+                  ></textarea>
+                </label>
+              </fieldset>
+              <fieldset class="form__group form__container-radio-buttons">
+                <div class="form__element">
+                  <legend class="text text_black">Вам есть 18 лет?</legend>
+                  <div class="form__radio-buttons">
+                    <label for="yes" class="form__radio-button text text_black"
+                      ><input type="radio" name="age" id="yes" value="yes" />
+                      <span class="form__custom-radio-button">
+                        <svg
+                          viewBox="0 0 26 26"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13 24C19.0751 24 24 19.0751 24 13C24 6.92487 19.0751 2 13 2C6.92487 2 2 6.92487 2 13C2 19.0751 6.92487 24 13 24ZM13 26C20.1797 26 26 20.1797 26 13C26 5.8203 20.1797 0 13 0C5.8203 0 0 5.8203 0 13C0 20.1797 5.8203 26 13 26Z"
+                            fill="#1B1F2B"
+                          />
+                          <circle
+                            class="form__custom-radio-button-check"
+                            cx="13"
+                            cy="13"
+                            r="6"
+                            fill="#1B1F2B"
+                          />
+                        </svg>
+                      </span>
+                      Да</label
+                    >
+                    <label for="no" class="form__radio-button text text_black"
+                      ><input type="radio" name="age" id="no" value="no" />
+                      <span class="form__custom-radio-button">
+                        <svg
+                          viewBox="0 0 26 26"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M13 24C19.0751 24 24 19.0751 24 13C24 6.92487 19.0751 2 13 2C6.92487 2 2 6.92487 2 13C2 19.0751 6.92487 24 13 24ZM13 26C20.1797 26 26 20.1797 26 13C26 5.8203 20.1797 0 13 0C5.8203 0 0 5.8203 0 13C0 20.1797 5.8203 26 13 26Z"
+                            fill="#1B1F2B"
+                          />
+                          <circle
+                            class="form__custom-radio-button-check"
+                            cx="13"
+                            cy="13"
+                            r="6"
+                            fill="#1B1F2B"
+                          />
+                        </svg>
+                      </span>
+                      Нет</label
+                    >
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="form__group form__container-checkbox">
+                <label class="form__checkbox text text_gray">
+                  <input type="checkbox" name="license-agreement" required />
+                  <span class="form__custom-checkbox">
                     <svg
                       viewBox="0 0 26 26"
                       fill="none"
@@ -279,589 +418,423 @@
                       <path
                         fill-rule="evenodd"
                         clip-rule="evenodd"
-                        d="M13 19.4143L4.29289 10.7072C3.90236 10.3167 3.90237 9.68351 4.29289 9.29298C4.68341 8.90246 5.31658 8.90246 5.7071 9.29298L13 16.5859L20.2929 9.29298C20.6834 8.90246 21.3166 8.90246 21.7071 9.29298C22.0976 9.68351 22.0976 10.3167 21.7071 10.7072L13 19.4143Z"
+                        d="M21 2H5C3.34315 2 2 3.34315 2 5V21C2 22.6569 3.34315 24 5 24H21C22.6569 24 24 22.6569 24 21V5C24 3.34315 22.6569 2 21 2ZM5 0C2.23858 0 0 2.23858 0 5V21C0 23.7614 2.23858 26 5 26H21C23.7614 26 26 23.7614 26 21V5C26 2.23858 23.7614 0 21 0H5Z"
+                        fill="#1B1F2B"
+                      />
+                      <path
+                        class="form__custom-checkbox-check"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M7.29304 12.5358C7.68357 12.1453 8.31673 12.1453 8.70726 12.5358L11.6216 15.4502L18.1574 8.91435C18.5479 8.52383 19.1811 8.52383 19.5716 8.91435C19.9622 9.30488 19.9622 9.93804 19.5716 10.3286L12.3287 17.5715C11.9382 17.962 11.305 17.962 10.9145 17.5715L7.29304 13.95C6.90252 13.5595 6.90252 12.9263 7.29304 12.5358Z"
                         fill="#1B1F2B"
                       />
                     </svg>
                   </span>
+                  <span class="text text_small text_gray">
+                    Нажимая кнопку, я&nbsp;принимаю условия
+                    <a href="#" class="link link_black">
+                      <span class="text text_small text_black"
+                        >Лицензионного договора</span
+                      >
+                    </a>
+                  </span></label
+                >
+              </fieldset>
+              <fieldset class="form__group">
+                <div class="form__buttons">
+                  <button
+                    type="submit"
+                    class="form__button form__button_submit text"
+                  >
+                    Найти&nbsp;тур
+                  </button>
+                  <button
+                    type="reset"
+                    class="form__button form__button_reset text"
+                  >
+                    Сбросить
+                  </button>
                 </div>
-              </label>
-
-              <!--    <script>
-                const selectElement = document.getElementById("form__select");
-                const optionElement = document.querySelectorAll("option");
-                selectElement.addEventListener("change", function () {
-                  optionElement.style.color = "var(--black)";
-                });
-              </script> -->
-            </fieldset>
-
-            <fieldset class="form__group">
-              <label class="form__element text text_black">
-                Email
-                <input
-                  type="email"
-                  name="email"
-                  class="form__input-field text text_gray"
-                  placeholder="example@mail.com"
-                  required
-                />
-              </label>
-            </fieldset>
-
-            <fieldset class="form__group">
-              <label class="form__element text text_black">
-                Телефон
-                <input
-                  type="tel"
-                  name="tel"
-                  class="form__input-field text text_gray"
-                  placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _"
-                  pattern="^(\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}|7\d{10})$"
-                  required
-                />
-              </label>
-            </fieldset>
-
-            <fieldset class="form__group">
-              <label class="form__element text text_black">
-                Дата от
-                <input
-                  type="date"
-                  name="date-from"
-                  class="form__input-field form__input-date text text_gray"
-                  required
-              /></label>
-            </fieldset>
-
-            <fieldset class="form__group">
-              <label class="form__element text text_black">
-                Дата до
-                <input
-                  type="date"
-                  name="date-before"
-                  class="form__input-field form__input-date text text_gray"
-                  required
-              /></label>
-            </fieldset>
-
-            <fieldset class="form__group form__container-comment">
-              <label class="form__element text text_black">
-                Комментарий
-                <textarea
-                  name="comment"
-                  class="form__input-field form__input-comment text text_black"
-                ></textarea>
-              </label>
-            </fieldset>
-
-            <fieldset class="form__group form__container-radio-buttons">
-              <div class="form__element">
-                <legend class="text text_black">Вам есть 18 лет?</legend>
-
-                <div class="form__radio-buttons">
-                  <label for="yes" class="form__radio-button text text_black"
-                    ><input type="radio" name="age" id="yes" value="yes" />
-                    <span class="form__custom-radio-button">
-                      <svg
-                        viewBox="0 0 26 26"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M13 24C19.0751 24 24 19.0751 24 13C24 6.92487 19.0751 2 13 2C6.92487 2 2 6.92487 2 13C2 19.0751 6.92487 24 13 24ZM13 26C20.1797 26 26 20.1797 26 13C26 5.8203 20.1797 0 13 0C5.8203 0 0 5.8203 0 13C0 20.1797 5.8203 26 13 26Z"
-                          fill="#1B1F2B"
-                        />
-                        <circle
-                          class="form__custom-radio-button-check"
-                          cx="13"
-                          cy="13"
-                          r="6"
-                          fill="#1B1F2B"
-                        />
-                      </svg>
-                    </span>
-                    Да</label
-                  >
-                  <label for="no" class="form__radio-button text text_black"
-                    ><input type="radio" name="age" id="no" value="no" />
-                    <span class="form__custom-radio-button">
-                      <svg
-                        viewBox="0 0 26 26"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M13 24C19.0751 24 24 19.0751 24 13C24 6.92487 19.0751 2 13 2C6.92487 2 2 6.92487 2 13C2 19.0751 6.92487 24 13 24ZM13 26C20.1797 26 26 20.1797 26 13C26 5.8203 20.1797 0 13 0C5.8203 0 0 5.8203 0 13C0 20.1797 5.8203 26 13 26Z"
-                          fill="#1B1F2B"
-                        />
-                        <circle
-                          class="form__custom-radio-button-check"
-                          cx="13"
-                          cy="13"
-                          r="6"
-                          fill="#1B1F2B"
-                        />
-                      </svg>
-                    </span>
-                    Нет</label
-                  >
+              </fieldset>
+            </form>
+          </section>
+          <section class="reviews">
+            <div class="intro-section">
+              <h2 class="heading heading_2">
+                Отзывы наших <br />
+                путешественников
+              </h2>
+              <p class="text text_gray">
+                Идейные соображения высшего порядка, а&nbsp;также рамки
+                и&nbsp;место обучения кадров
+              </p>
+            </div>
+            <div class="reviews__cards">
+              <div class="reviews__card">
+                <div class="reviews__comment">
+                  <p class="text text_big text_black">
+                    Идейные соображения высшего порядка, а также рамки и место
+                    обучения кадров обеспечивает широкому кругу (специалистов)
+                    участие в формировании новых предложений. Идейные
+                    соображения высшего порядка, а также начало повседневной
+                    работы по формированию позиции позволяет оценить значение
+                    модели развития.
+                  </p>
+                </div>
+                <div class="reviews__traveler-info">
+                  <div class="reviews__text-content">
+                    <div class="reviews__traveler-name">
+                      <p class="text text_black text_big">Мария</p>
+                    </div>
+                    <div class="reviews__tour-name">
+                      <p class="text text_small text_gray">
+                        Тур: Вдали от&nbsp;дома
+                      </p>
+                    </div>
+                  </div>
+                  <div class="reviews__traveler-photo">
+                    <img src="assets/images/review-photo-1.jpg" alt="" />
+                  </div>
                 </div>
               </div>
-            </fieldset>
-
-            <fieldset class="form__group form__container-checkbox">
-              <label class="form__checkbox text text_gray">
-                <input type="checkbox" name="license-agreement" required />
-
-                <span class="form__custom-checkbox">
-                  <svg
-                    viewBox="0 0 26 26"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M21 2H5C3.34315 2 2 3.34315 2 5V21C2 22.6569 3.34315 24 5 24H21C22.6569 24 24 22.6569 24 21V5C24 3.34315 22.6569 2 21 2ZM5 0C2.23858 0 0 2.23858 0 5V21C0 23.7614 2.23858 26 5 26H21C23.7614 26 26 23.7614 26 21V5C26 2.23858 23.7614 0 21 0H5Z"
-                      fill="#1B1F2B"
-                    />
-                    <path
-                      class="form__custom-checkbox-check"
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M7.29304 12.5358C7.68357 12.1453 8.31673 12.1453 8.70726 12.5358L11.6216 15.4502L18.1574 8.91435C18.5479 8.52383 19.1811 8.52383 19.5716 8.91435C19.9622 9.30488 19.9622 9.93804 19.5716 10.3286L12.3287 17.5715C11.9382 17.962 11.305 17.962 10.9145 17.5715L7.29304 13.95C6.90252 13.5595 6.90252 12.9263 7.29304 12.5358Z"
-                      fill="#1B1F2B"
-                    />
-                  </svg>
-                </span>
-                <span class="text text_small text_gray">
-                  Нажимая кнопку, я&nbsp;принимаю условия
-                  <a href="#" class="link link_black">
-                    <span class="text text_small text_black"
-                      >Лицензионного договора</span
-                    >
-                  </a>
-                </span></label
-              >
-            </fieldset>
-
-            <fieldset class="form__group">
-              <div class="form__buttons">
-                <button
-                  type="submit"
-                  class="form__button form__button_submit text"
-                >
-                  Найти&nbsp;тур
-                </button>
-                <button
-                  type="reset"
-                  class="form__button form__button_reset text"
-                >
-                  Сбросить
-                </button>
-              </div>
-            </fieldset>
-          </form>
-        </section>
-
-        <section class="reviews">
-          <div class="intro-section">
-            <h2 class="heading heading_2">
-              Отзывы наших <br />
-              путешественников
-            </h2>
+              <!--   <div class="reviews__card">
+                <div class="reviews__comment">
+                  <p class="text text_big text_black">
+                    Равным образом постоянный количественный рост и&nbsp;сфера
+                    нашей активности играет важную роль в&nbsp;формировании
+                    системы обучения кадров, соответствует насущным потребностям.
+                  </p>
+                  <p class="text text_black text_big">
+                    Значимость этих проблем настолько очевидна, что дальнейшее
+                    развитие различных форм деятельности обеспечивает широкому
+                    кругу (специалистов) участие в&nbsp;формировании новых
+                    предложений. Повседневная практика показывает, что реализация
+                    намеченных плановых заданий в&nbsp;значительной степени
+                    обуславливает создание модели развития.
+                  </p>
+                </div>
+                <div class="reviews__traveler-info">
+                  <div class="reviews__text-content">
+                    <div class="reviews__traveler-name">
+                      <p class="text text_big text_black">Павел</p>
+                    </div>
+                    <div class="reviews__tour-name">
+                      <p class="text text_small text_gray">Тур: Путешествие в&nbsp;горы</p>
+                    </div>
+                  </div>
+                  <div class="reviews__traveler-photo">
+                    <img src="assets/images/review-photo-2.jpg" alt="" />
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </section>
+          <section class="photos">
+            <h2 class="heading heading_2">Фотографии путешествий</h2>
             <p class="text text_gray">
               Идейные соображения высшего порядка, а&nbsp;также рамки
               и&nbsp;место обучения кадров
             </p>
-          </div>
-
-          <div class="reviews__cards">
-            <div class="reviews__card">
-              <div class="reviews__comment">
-                <p class="text text_big text_black">
-                  Идейные соображения высшего порядка, а также рамки и место
-                  обучения кадров обеспечивает широкому кругу (специалистов)
-                  участие в формировании новых предложений. Идейные соображения
-                  высшего порядка, а также начало повседневной работы по
-                  формированию позиции позволяет оценить значение модели
-                  развития.
-                </p>
-              </div>
-
-              <div class="reviews__traveler-info">
-                <div class="reviews__text-content">
-                  <div class="reviews__traveler-name">
-                    <p class="text text_black text_big">Мария</p>
-                  </div>
-                  <div class="reviews__tour-name">
-                    <p class="text text_small text_gray">
-                      Тур: Вдали от&nbsp;дома
-                    </p>
-                  </div>
+            <div class="photos__gallery">
+              <div class="photos__gallery-row photos__gallery-row_odd">
+                <div class="photos__gallery-item">
+                  <img
+                    src="assets/images/travel-photo-1.jpg"
+                    alt=""
+                    class="photos__gallery-img"
+                  />
                 </div>
-                <div class="reviews__traveler-photo">
-                  <img src="assets/images/review-photo-1.jpg" alt="" />
+                <div
+                  class="photos__gallery-item photos__gallery-item_hidden-1920 hidden"
+                >
+                  <img
+                    src="assets/images/travel-photo-2.jpg"
+                    alt=""
+                    class="photos__gallery-img"
+                  />
+                </div>
+                <div
+                  class="photos__gallery-item photos__gallery-item_hidden-1024 hidden"
+                >
+                  <img
+                    src="assets/images/travel-photo-3.jpg"
+                    alt=""
+                    class="photos__gallery-img"
+                  />
+                </div>
+                <div class="photos__gallery-item">
+                  <img
+                    src="assets/images/travel-photo-4.jpg"
+                    alt=""
+                    class="photos__gallery-img"
+                  />
+                </div>
+              </div>
+              <div class="photos__gallery-row photos__gallery-row_even">
+                <div class="photos__gallery-item">
+                  <img
+                    src="assets/images/travel-photo-5.jpg"
+                    alt=""
+                    class="photos__gallery-img"
+                  />
+                </div>
+                <div
+                  class="photos__gallery-item photos__gallery-item_hidden-1024 hidden"
+                >
+                  <img
+                    src="assets/images/travel-photo-6.jpg"
+                    alt=""
+                    class="photos__gallery-img"
+                  />
+                </div>
+                <div
+                  class="photos__gallery-item photos__gallery-item_hidden-1920 hidden"
+                >
+                  <img
+                    src="assets/images/travel-photo-7.jpg"
+                    alt=""
+                    class="photos__gallery-img"
+                  />
+                </div>
+                <div class="photos__gallery-item">
+                  <img
+                    src="assets/images/travel-photo-8.jpg"
+                    alt=""
+                    class="photos__gallery-img"
+                  />
+                </div>
+                <div class="photos__gallery-item">
+                  <img
+                    src="assets/images/travel-photo-9.jpg"
+                    alt=""
+                    class="photos__gallery-img"
+                  />
+                </div>
+              </div>
+              <div class="photos__gallery-row photos__gallery-row_odd">
+                <div class="photos__gallery-item">
+                  <img
+                    src="assets/images/travel-photo-10.jpg"
+                    alt=""
+                    class="photos__gallery-img"
+                  />
+                </div>
+                <div class="photos__gallery-item">
+                  <img
+                    src="assets/images/travel-photo-11.jpg"
+                    alt=""
+                    class="photos__gallery-img"
+                  />
+                </div>
+                <div
+                  class="photos__gallery-item photos__gallery-item_hidden-1024 hidden"
+                >
+                  <img
+                    src="assets/images/travel-photo-12.jpg"
+                    alt=""
+                    class="photos__gallery-img"
+                  />
+                </div>
+                <div
+                  class="photos__gallery-item photos__gallery-item_hidden-1920 hidden"
+                >
+                  <img
+                    src="assets/images/travel-photo-13.jpg"
+                    alt=""
+                    class="photos__gallery-img"
+                  />
                 </div>
               </div>
             </div>
-
-            <!--   <div class="reviews__card">
-              <div class="reviews__comment">
-                <p class="text text_big text_black">
-                  Равным образом постоянный количественный рост и&nbsp;сфера
-                  нашей активности играет важную роль в&nbsp;формировании
-                  системы обучения кадров, соответствует насущным потребностям.
-                </p>
-                <p class="text text_black text_big">
-                  Значимость этих проблем настолько очевидна, что дальнейшее
-                  развитие различных форм деятельности обеспечивает широкому
-                  кругу (специалистов) участие в&nbsp;формировании новых
-                  предложений. Повседневная практика показывает, что реализация
-                  намеченных плановых заданий в&nbsp;значительной степени
-                  обуславливает создание модели развития.
-                </p>
-              </div>
-
-              <div class="reviews__traveler-info">
-                <div class="reviews__text-content">
-                  <div class="reviews__traveler-name">
-                    <p class="text text_big text_black">Павел</p>
-                  </div>
-                  <div class="reviews__tour-name">
-                    <p class="text text_small text_gray">Тур: Путешествие в&nbsp;горы</p>
-                  </div>
-                </div>
-                <div class="reviews__traveler-photo">
-                  <img src="assets/images/review-photo-2.jpg" alt="" />
-                </div>
-              </div>
-            </div> -->
-          </div>
-        </section>
-
-        <section class="photos">
-          <h2 class="heading heading_2">Фотографии путешествий</h2>
-          <p class="text text_gray">
-            Идейные соображения высшего порядка, а&nbsp;также рамки и&nbsp;место
-            обучения кадров
-          </p>
-
-          <div class="photos__gallery">
-            <div class="photos__gallery-row photos__gallery-row_odd">
-              <div class="photos__gallery-item">
+            <!--   <div class="photos__cards">
+              <div class="photos__card photos__line1">
                 <img
                   src="assets/images/travel-photo-1.jpg"
                   alt=""
-                  class="photos__gallery-img"
+                  class="photos__img"
                 />
               </div>
-              <div
-                class="photos__gallery-item photos__gallery-item_hidden-1920 hidden"
-              >
+              <div class="photos__card photos__line1">
                 <img
                   src="assets/images/travel-photo-2.jpg"
                   alt=""
-                  class="photos__gallery-img"
+                  class="photos__img"
                 />
               </div>
-              <div
-                class="photos__gallery-item photos__gallery-item_hidden-1024 hidden"
-              >
+              <div class="photos__card photos__line1">
                 <img
                   src="assets/images/travel-photo-3.jpg"
                   alt=""
-                  class="photos__gallery-img"
+                  class="photos__img"
                 />
               </div>
-              <div class="photos__gallery-item">
+              <div class="photos__card photos__line1">
                 <img
                   src="assets/images/travel-photo-4.jpg"
                   alt=""
-                  class="photos__gallery-img"
+                  class="photos__img"
                 />
               </div>
-            </div>
-
-            <div class="photos__gallery-row photos__gallery-row_even">
-              <div class="photos__gallery-item">
+              <div class="photos__card photos__line2">
                 <img
                   src="assets/images/travel-photo-5.jpg"
                   alt=""
-                  class="photos__gallery-img"
+                  class="photos__img"
                 />
               </div>
-              <div
-                class="photos__gallery-item photos__gallery-item_hidden-1024 hidden"
-              >
+              <div class="photos__card photos__line2">
                 <img
                   src="assets/images/travel-photo-6.jpg"
                   alt=""
-                  class="photos__gallery-img"
+                  class="photos__img"
                 />
               </div>
-              <div
-                class="photos__gallery-item photos__gallery-item_hidden-1920 hidden"
-              >
+              <div class="photos__card photos__line2">
                 <img
                   src="assets/images/travel-photo-7.jpg"
                   alt=""
-                  class="photos__gallery-img"
+                  class="photos__img"
                 />
               </div>
-              <div class="photos__gallery-item">
+              <div class="photos__card photos__line2">
                 <img
                   src="assets/images/travel-photo-8.jpg"
                   alt=""
-                  class="photos__gallery-img"
+                  class="photos__img"
                 />
               </div>
-              <div class="photos__gallery-item">
+              <div class="photos__card photos__line2">
                 <img
                   src="assets/images/travel-photo-9.jpg"
                   alt=""
-                  class="photos__gallery-img"
+                  class="photos__img"
                 />
               </div>
-            </div>
-
-            <div class="photos__gallery-row photos__gallery-row_odd">
-              <div class="photos__gallery-item">
+              <div class="photos__card photos__line3">
                 <img
                   src="assets/images/travel-photo-10.jpg"
                   alt=""
-                  class="photos__gallery-img"
+                  class="photos__img"
                 />
               </div>
-              <div class="photos__gallery-item">
+              <div class="photos__card photos__line3">
                 <img
                   src="assets/images/travel-photo-11.jpg"
                   alt=""
-                  class="photos__gallery-img"
+                  class="photos__img"
                 />
               </div>
-              <div
-                class="photos__gallery-item photos__gallery-item_hidden-1024 hidden"
-              >
+              <div class="photos__card photos__line3">
                 <img
                   src="assets/images/travel-photo-12.jpg"
                   alt=""
-                  class="photos__gallery-img"
+                  class="photos__img"
                 />
               </div>
-              <div
-                class="photos__gallery-item photos__gallery-item_hidden-1920 hidden"
-              >
+              <div class="photos__card photos__line3">
                 <img
                   src="assets/images/travel-photo-13.jpg"
                   alt=""
-                  class="photos__gallery-img"
+                  class="photos__img"
                 />
               </div>
-            </div>
-          </div>
-          <!--   <div class="photos__cards">
-            <div class="photos__card photos__line1">
-              <img
-                src="assets/images/travel-photo-1.jpg"
-                alt=""
-                class="photos__img"
-              />
-            </div>
-            <div class="photos__card photos__line1">
-              <img
-                src="assets/images/travel-photo-2.jpg"
-                alt=""
-                class="photos__img"
-              />
-            </div>
-            <div class="photos__card photos__line1">
-              <img
-                src="assets/images/travel-photo-3.jpg"
-                alt=""
-                class="photos__img"
-              />
-            </div>
-            <div class="photos__card photos__line1">
-              <img
-                src="assets/images/travel-photo-4.jpg"
-                alt=""
-                class="photos__img"
-              />
-            </div>
-            <div class="photos__card photos__line2">
-              <img
-                src="assets/images/travel-photo-5.jpg"
-                alt=""
-                class="photos__img"
-              />
-            </div>
-            <div class="photos__card photos__line2">
-              <img
-                src="assets/images/travel-photo-6.jpg"
-                alt=""
-                class="photos__img"
-              />
-            </div>
-            <div class="photos__card photos__line2">
-              <img
-                src="assets/images/travel-photo-7.jpg"
-                alt=""
-                class="photos__img"
-              />
-            </div>
-            <div class="photos__card photos__line2">
-              <img
-                src="assets/images/travel-photo-8.jpg"
-                alt=""
-                class="photos__img"
-              />
-            </div>
-            <div class="photos__card photos__line2">
-              <img
-                src="assets/images/travel-photo-9.jpg"
-                alt=""
-                class="photos__img"
-              />
-            </div>
-            <div class="photos__card photos__line3">
-              <img
-                src="assets/images/travel-photo-10.jpg"
-                alt=""
-                class="photos__img"
-              />
-            </div>
-            <div class="photos__card photos__line3">
-              <img
-                src="assets/images/travel-photo-11.jpg"
-                alt=""
-                class="photos__img"
-              />
-            </div>
-            <div class="photos__card photos__line3">
-              <img
-                src="assets/images/travel-photo-12.jpg"
-                alt=""
-                class="photos__img"
-              />
-            </div>
-            <div class="photos__card photos__line3">
-              <img
-                src="assets/images/travel-photo-13.jpg"
-                alt=""
-                class="photos__img"
-              />
-            </div>
-          </div> -->
-        </section>
-
-        <!-- <section class="stories">
-          <h2 class="heading heading_2">Истории путешествий</h2>
-          <p class="text text_gray">
-            Идейные соображения высшего порядка, а&nbsp;также рамки и&nbsp;место
-            обучения кадров
-          </p>
-          <div class="stories__cards">
-            <div class="stories__card">
-              <h3 class="heading heading_3 text text_white">
-                Автостопом в&nbsp;Стамбул
-              </h3>
-              <p class="text text_white">
-                Идейные соображения высшего порядка, а&nbsp;также рамки
-                и&nbsp;место обучения кадров обеспечивает широкому кругу
-                (специалистов) участие в&nbsp;формировании новых предложений:
-              </p>
-              <ul class="text text_white">
-                <li>вкусная еда</li>
-                <li>дешевый транспорт</li>
-                <li>красивый город.</li>
-              </ul>
-
-              <a href="#" class="stories__link" target="_blank"
-                ><span class="text text_big text_white">Подробнее</span></a
-              >
-            </div>
-
-            <div class="stories__card">
-              <h3 class="heading heading_3 text text_white">
-                Автостопом в&nbsp;Стамбул
-              </h3>
-              <p class="text text_white">
-                Идейные соображения высшего порядка, а&nbsp;также рамки
-                и&nbsp;место обучения кадров обеспечивает широкому кругу
-                (специалистов) участие в&nbsp;формировании новых предложений.
-              </p>
-
-              <a href="#" class="stories__link" target="_blank"
-                ><span class="text text_big text_white">Подробнее</span></a
-              >
-            </div>
-
-            <div class="stories__card">
-              <h3 class="heading heading_3 text text_white">
-                Автостопом в&nbsp;Стамбул
-              </h3>
-              <p class="text text_white">
-                Идейные соображения высшего порядка, а&nbsp;также рамки
-                и&nbsp;место обучения кадров обеспечивает широкому кругу
-                (специалистов) участие в&nbsp;формировании новых предложений.
-              </p>
-
-              <a href="#" class="stories__link" target="_blank"
-                ><span class="text text_big text_white">Подробнее</span></a
-              >
-            </div>
-          </div>
-        </section> -->
-
-        <section class="contact">
-          <div class="contact__img"></div>
-          <div class="intro-section contact__text">
-            <h2 class="heading contact__heading">
-              Пора в&nbsp;путешествие вместе с&nbsp;нами!
-            </h2>
+            </div> -->
+          </section>
+          <!-- <section class="stories">
+            <h2 class="heading heading_2">Истории путешествий</h2>
             <p class="text text_gray">
-              Напиши на&nbsp;почту и&nbsp;узнай подробности на&nbsp;<a
-                href="mailto:yourtour@gmail.com"
-                class="link link_black"
-                target="_blank"
-                ><span class="text text_black">yourtour@gmail.com</span></a
-              >
+              Идейные соображения высшего порядка, а&nbsp;также рамки и&nbsp;место
+              обучения кадров
             </p>
-          </div>
-        </section>
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="container footer__container">
-        <p class="text text_gray">Наши социальные сети</p>
-
-        <address class="footer__address">
-          <ul class="footer__contacts">
-            <li class="footer__contact">
-              <a href="#" class="footer__link link link_black" target="_blank"
-                ><span class="text text_black">instagram</span></a
-              >
-            </li>
-            <li class="footer__contact">
-              <a href="#" class="footer__link link link_black" target="_blank"
-                ><span class="text text_black">facebook</span></a
-              >
-            </li>
-            <li class="footer__contact">
-              <a href="#" class="footer__link link link_black" target="_blank"
-                ><span class="text text_black">vkontakte</span></a
-              >
-            </li>
-          </ul>
-        </address>
-      </div>
-    </footer>
+            <div class="stories__cards">
+              <div class="stories__card">
+                <h3 class="heading heading_3 text text_white">
+                  Автостопом в&nbsp;Стамбул
+                </h3>
+                <p class="text text_white">
+                  Идейные соображения высшего порядка, а&nbsp;также рамки
+                  и&nbsp;место обучения кадров обеспечивает широкому кругу
+                  (специалистов) участие в&nbsp;формировании новых предложений:
+                </p>
+                <ul class="text text_white">
+                  <li>вкусная еда</li>
+                  <li>дешевый транспорт</li>
+                  <li>красивый город.</li>
+                </ul>
+                <a href="#" class="stories__link" target="_blank"
+                  ><span class="text text_big text_white">Подробнее</span></a
+                >
+              </div>
+              <div class="stories__card">
+                <h3 class="heading heading_3 text text_white">
+                  Автостопом в&nbsp;Стамбул
+                </h3>
+                <p class="text text_white">
+                  Идейные соображения высшего порядка, а&nbsp;также рамки
+                  и&nbsp;место обучения кадров обеспечивает широкому кругу
+                  (специалистов) участие в&nbsp;формировании новых предложений.
+                </p>
+                <a href="#" class="stories__link" target="_blank"
+                  ><span class="text text_big text_white">Подробнее</span></a
+                >
+              </div>
+              <div class="stories__card">
+                <h3 class="heading heading_3 text text_white">
+                  Автостопом в&nbsp;Стамбул
+                </h3>
+                <p class="text text_white">
+                  Идейные соображения высшего порядка, а&nbsp;также рамки
+                  и&nbsp;место обучения кадров обеспечивает широкому кругу
+                  (специалистов) участие в&nbsp;формировании новых предложений.
+                </p>
+                <a href="#" class="stories__link" target="_blank"
+                  ><span class="text text_big text_white">Подробнее</span></a
+                >
+              </div>
+            </div>
+          </section> -->
+          <section class="contact">
+            <div class="contact__img"></div>
+            <div class="intro-section contact__text">
+              <h2 class="heading contact__heading">
+                Пора в&nbsp;путешествие вместе с&nbsp;нами!
+              </h2>
+              <p class="text text_gray">
+                Напиши на&nbsp;почту и&nbsp;узнай подробности на&nbsp;<a
+                  href="mailto:yourtour@gmail.com"
+                  class="link link_black"
+                  target="_blank"
+                  ><span class="text text_black">yourtour@gmail.com</span></a
+                >
+              </p>
+            </div>
+          </section>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <p class="text text_gray">Наши социальные сети</p>
+          <address class="footer__address">
+            <ul class="footer__contacts">
+              <li class="footer__contact">
+                <a href="#" class="footer__link link link_black" target="_blank"
+                  ><span class="text text_black">instagram</span></a
+                >
+              </li>
+              <li class="footer__contact">
+                <a href="#" class="footer__link link link_black" target="_blank"
+                  ><span class="text text_black">facebook</span></a
+                >
+              </li>
+              <li class="footer__contact">
+                <a href="#" class="footer__link link link_black" target="_blank"
+                  ><span class="text text_black">vkontakte</span></a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
