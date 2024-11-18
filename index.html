@@ -19,12 +19,19 @@
       type="text/css"
       href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
     />
-    <link rel="stylesheet" href="styles/fonts.css" />
+    <!-- <link rel="stylesheet" href="styles/fonts.css" /> -->
     <link rel="stylesheet" href="styles/style.css" />
     <link
       rel="shortcut icon"
       href="assets/icons/favicon.ico"
       type="image/x-icon"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/fonts.css" />
   </head>
@@ -223,6 +230,7 @@
                   >Подробнее</span
                 >
               </a>
+
               <a
                 href="#"
                 class="choose-tour__card choose-tour__card_2 link"
@@ -238,6 +246,7 @@
                   >Подробнее</span
                 >
               </a>
+
               <a
                 href="#"
                 class="choose-tour__card choose-tour__card_3 link"
@@ -253,6 +262,7 @@
                   >Подробнее</span
                 >
               </a>
+
               <a
                 href="#"
                 class="choose-tour__card choose-tour__card_4 link"
@@ -268,6 +278,7 @@
                   >Подробнее</span
                 >
               </a>
+
               <a
                 href="#"
                 class="choose-tour__card choose-tour__card_5 link"
@@ -283,6 +294,7 @@
                   >Подробнее</span
                 >
               </a>
+
               <a
                 href="#"
                 class="choose-tour__card choose-tour__card_6 link"
@@ -817,61 +829,125 @@
             </div> -->
           </section>
 
-          <!-- <section id="stories" class="section stories">
-            <div class="intro-section__text">
-            <h2 class="heading heading_2">Истории путешествий</h2>
-            <p class="intro-section__text text text_gray">
-              Идейные соображения высшего порядка, а&nbsp;также рамки и&nbsp;место
-              обучения кадров
-            </p>
-          </div>
+          <section id="stories" class="section stories">
+            <div class="intro-section">
+              <h2 class="heading heading_2">Истории путешествий</h2>
+              <p class="intro-section__text text text_gray">
+                Идейные соображения высшего порядка, а&nbsp;также рамки
+                и&nbsp;место обучения кадров
+              </p>
+            </div>
+
             <div class="stories__cards">
               <div class="stories__card">
-                <h3 class="heading heading_3 text text_white">
-                  Автостопом в&nbsp;Стамбул
-                </h3>
-                <p class="text text_white">
-                  Идейные соображения высшего порядка, а&nbsp;также рамки
-                  и&nbsp;место обучения кадров обеспечивает широкому кругу
-                  (специалистов) участие в&nbsp;формировании новых предложений:
-                </p>
-                <ul class="text text_white">
-                  <li>вкусная еда</li>
-                  <li>дешевый транспорт</li>
-                  <li>красивый город.</li>
-                </ul>
-                <a href="#" class="stories__link" target="_blank"
-                  ><span class="text text_big text_white">Подробнее</span></a
-                >
+                <div class="stories__info">
+                  <h3 class="heading heading_3">Автостопом в&nbsp;Стамбул</h3>
+                  <div class="stories__description">
+                    <p class="text text_white">
+                      Идейные соображения высшего порядка, а также рамки и место
+                      обучения кадров обеспечивает широкому кругу (специалистов)
+                      участие в формировании новых предложений:
+                    </p>
+                    <ul class="stories__ul text text_white">
+                      <li>вкусная еда</li>
+                      <li>дешевый транспорт</li>
+                      <li>красивый город.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="stories__links">
+                  <a href="#" class="link link-more" target="_blank"
+                    ><span class="text text_white text_big">Подробнее</span>
+                  </a>
+
+                  <div class="stories__social-links">
+                    <a href="#" class="link link_white" target="_blank"
+                      ><span class="text text_white">instagram</span></a
+                    >
+                    <a href="#" class="link link_white" target="_blank"
+                      ><span class="text text_white">facebook</span></a
+                    >
+                    <a href="#" class="link link_white" target="_blank"
+                      ><span class="text text_white">YouTube</span></a
+                    >
+                  </div>
+                </div>
               </div>
+
               <div class="stories__card">
-                <h3 class="heading heading_3 text text_white">
-                  Автостопом в&nbsp;Стамбул
-                </h3>
-                <p class="text text_white">
-                  Идейные соображения высшего порядка, а&nbsp;также рамки
-                  и&nbsp;место обучения кадров обеспечивает широкому кругу
-                  (специалистов) участие в&nbsp;формировании новых предложений.
-                </p>
-                <a href="#" class="stories__link" target="_blank"
-                  ><span class="text text_big text_white">Подробнее</span></a
-                >
+                <div class="stories__info">
+                  <h3 class="heading heading_3">Автостопом в&nbsp;Стамбул</h3>
+                  <div class="stories__description">
+                    <p class="text text_white">
+                      Идейные соображения высшего порядка, а также рамки и место
+                      обучения кадров обеспечивает широкому кругу (специалистов)
+                      участие в формировании новых предложений.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="stories__links">
+                  <a href="#" class="link link-more" target="_blank"
+                    ><span class="text text_white text_big">Подробнее</span>
+                  </a>
+
+                  <div class="stories__social-links">
+                    <a href="#" class="link link_white" target="_blank"
+                      ><span class="text text_white">instagram</span></a
+                    >
+                    <a href="#" class="link link_white" target="_blank"
+                      ><span class="text text_white">ВКонтакте</span></a
+                    >
+                  </div>
+                </div>
               </div>
+
               <div class="stories__card">
-                <h3 class="heading heading_3 text text_white">
-                  Автостопом в&nbsp;Стамбул
-                </h3>
-                <p class="text text_white">
-                  Идейные соображения высшего порядка, а&nbsp;также рамки
-                  и&nbsp;место обучения кадров обеспечивает широкому кругу
-                  (специалистов) участие в&nbsp;формировании новых предложений.
-                </p>
-                <a href="#" class="stories__link" target="_blank"
-                  ><span class="text text_big text_white">Подробнее</span></a
-                >
+                <div class="stories__info">
+                  <h3 class="heading heading_3">Автостопом в&nbsp;Стамбул</h3>
+                  <div class="stories__description">
+                    <p class="text text_white">
+                      Идейные соображения высшего порядка, а также рамки и место
+                      обучения кадров обеспечивает широкому кругу (специалистов)
+                      участие в формировании новых предложений.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="stories__links">
+                  <a href="#" class="link link-more" target="_blank"
+                    ><span class="text text_white text_big">Подробнее</span>
+                  </a>
+
+                  <div class="stories__social-links">
+                    <a href="#" class="link link_white" target="_blank"
+                      ><span class="text text_white">instagram</span></a
+                    >
+                    <a href="#" class="link link_white" target="_blank"
+                      ><span class="text text_white">facebook</span></a
+                    >
+                    <a href="#" class="link link_white" target="_blank"
+                      ><span class="text text_white">ВКонтакте</span></a
+                    >
+                  </div>
+                </div>
               </div>
+
+              <script>
+                document.querySelectorAll(".stories__card").forEach((card) => {
+                  card.onclick = (event) => {
+                    if (!event.target.closest(".stories__social-links")) {
+                      window.open(
+                        card.querySelector(".link-more").href,
+                        "_blank"
+                      );
+                    }
+                  };
+                });
+              </script>
             </div>
-          </section> -->
+          </section>
 
           <section class="section contact">
             <div class="contact__img"></div>
