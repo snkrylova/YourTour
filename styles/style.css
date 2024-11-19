@@ -1,8 +1,4 @@
 :root {
-  --font-regular: "Roboto Regular", sans-serif;
-  --font-medium: "Roboto Medium", sans-serif;
-  --font-bold: "Roboto Bold", sans-serif;
-
   --black: #1b1f2b;
   --white: #fff;
   --green-100: #e0f0e5;
@@ -29,8 +25,6 @@ html {
 
 * {
   box-sizing: border-box;
-
-  font-family: var(--font-regular);
 
   transition: background-color 0.4s ease; /* навесить только на нужное */
 }
@@ -84,7 +78,6 @@ ul {
 .heading {
   margin: 0;
 
-  font-family: var(--font-bold);
   text-align: center;
 }
 
@@ -125,10 +118,6 @@ ul {
   letter-spacing: -0.01em;
 }
 
-.text_big {
-  font-family: var(--font-bold);
-}
-
 .text_white {
   color: var(--white);
 }
@@ -154,7 +143,6 @@ ul {
   }
 
   .heading_3 {
-    font-family: var(--font-medium);
     font-size: 35px;
     line-height: 122%;
     letter-spacing: normal;
@@ -1211,14 +1199,6 @@ ul {
     padding: 40px;
 
     border-radius: 50px;
-  }
-}
-
-@media (width >= 360px) {
-  .reviews__comment p {
-    font-family: var(--font-bold);
-    font-size: 23px;
-    line-height: 122%;
   }
 }
 
