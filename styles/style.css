@@ -1173,18 +1173,6 @@ ul {
   gap: 18px;
 }
 
-@media (width >= 360px) {
-  .reviews__cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (width >= 1024px) {
-  .reviews__cards {
-    gap: 30px;
-  }
-}
-
 .reviews__card {
   display: flex;
   flex-direction: column;
@@ -1192,18 +1180,26 @@ ul {
   padding: 20px;
 
   border-radius: 20px;
-  background: var(--beige-200);
+  background-color: var(--beige-200);
+
+  transition: all 0.6s ease;
 }
 
-@media (width >= 360px) {
-  .reviews__card {
-    padding: 40px;
+.reviews__card:hover {
+  background-color: var(--green-400);
 
-    border-radius: 50px;
-  }
+  transform: scale(1.1);
 }
 
-.reviews__comment p:not(:first-child) {
+.reviews__card:hover .text {
+  color: var(--beige-200);
+}
+
+.reviews__card:hover .reviews__tour-name .text {
+  color: var(--gray-300);
+}
+
+.reviews__comment .text:not(:first-child) {
   margin-top: 25px;
 }
 
@@ -1214,16 +1210,11 @@ ul {
   padding: 40px 0 0;
 }
 
-@media (width >= 360px) {
-  .reviews__traveler-info {
-    padding-top: 70px;
-  }
-}
-
 .reviews__text-content {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  padding-top: 16px;
 }
 
 .reviews__traveler-name .text {
@@ -1232,7 +1223,31 @@ ul {
   letter-spacing: 0.04em;
 }
 
-@media (width >= 360px) {
+.reviews__traveler-photo img {
+  width: 75px;
+  height: 75px;
+  border-radius: 100px;
+}
+
+@media (min-width: 1024px) {
+  .reviews__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .reviews__card {
+    padding: 40px;
+
+    border-radius: 50px;
+  }
+
+  .reviews__traveler-info {
+    padding-top: 70px;
+  }
+
+  .reviews__text-content {
+    padding-top: 0px;
+  }
+
   .reviews__traveler-name .text {
     font-size: 35px;
     line-height: 122%;
@@ -1240,22 +1255,10 @@ ul {
   }
 }
 
-.reviews__tour-name .text {
-  font-size: 16px;
-  line-height: 142%;
-  letter-spacing: -0.01em;
-}
-
-@media (width >= 360px) {
-  .reviews__tour-name .text {
-    font-size: 17px;
+@media (min-width: 1920px) {
+  .reviews__cards {
+    gap: 30px;
   }
-}
-
-.reviews__traveler-photo img {
-  width: 75px;
-  height: 75px;
-  border-radius: 100px;
 }
 
 /* reviews finish */
