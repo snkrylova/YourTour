@@ -206,26 +206,6 @@ ul {
   display: inline-block;
   width: max-content;
   z-index: 2;
-
-  background-color: transparent;
-
-  transition: background-color 0.4s ease;
-}
-
-@media (min-width: 1024px) {
-  .choose-tour__card:hover .link-more,
-  .stories__card:hover .link-more {
-    background: var(--green-400);
-  }
-
-  .choose-tour__card:active .link-more,
-  .stories__card:active .link-more {
-    background-color: var(--orange-200);
-  }
-
-  .stories__card:hover:has(.stories__social-links:hover) .link-more {
-    background-color: initial;
-  }
 }
 
 .link-more::after {
@@ -244,16 +224,33 @@ ul {
   z-index: 2;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1024px) {
   .link-more {
     padding: 7px 59px 7px 20px;
     margin: 0 0 -7px -20px;
 
     border-radius: 50px;
+    background-color: transparent;
+
+    transition: background-color 0.4s ease;
   }
 
   .link-more::after {
     margin-left: 16px;
+  }
+
+  .choose-tour__card:hover .link-more,
+  .stories__card:hover .link-more {
+    background: var(--green-400);
+  }
+
+  .choose-tour__card:active .link-more,
+  .stories__card:active .link-more {
+    background-color: var(--orange-200);
+  }
+
+  .stories__card:hover:has(.stories__social-links:hover) .link-more {
+    background-color: initial;
   }
 }
 
@@ -1371,9 +1368,9 @@ ul {
 /* stories start */
 
 .stories__cards {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 455px);
   gap: 20px;
 }
 
@@ -1383,8 +1380,6 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 318px;
-  height: 455px;
   padding: 30px;
   padding-right: 25px;
 
@@ -1415,21 +1410,14 @@ ul {
 
 @media (min-width: 1024px) {
   .stories__cards {
+    grid-template-rows: repeat(3, 567px);
     gap: 50px;
   }
 
   .stories__card {
-    width: 918px;
-    height: 567px;
     padding: 60px;
 
     border-radius: 50px;
-  }
-}
-
-@media (min-width: 1920px) {
-  .stories__card {
-    width: 1170px;
   }
 }
 
