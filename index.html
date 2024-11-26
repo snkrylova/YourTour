@@ -162,6 +162,7 @@
                     <button
                       class="choose-tour__button choose-tour__button_active"
                       onclick="toggleActiveButton(this)"
+                      data-target="choose-tour__popular"
                     >
                       <span class="text text_big text_black roboto-bold"
                         >Популярные</span
@@ -172,6 +173,7 @@
                     <button
                       class="choose-tour__button"
                       onclick="toggleActiveButton(this)"
+                      data-target="choose-tour__authorial"
                     >
                       <span class="text text_big text_black roboto-bold"
                         >Авторские</span
@@ -182,6 +184,7 @@
                     <button
                       class="choose-tour__button"
                       onclick="toggleActiveButton(this)"
+                      data-target="choose-tour__campaign"
                     >
                       <span class="text text_big text_black roboto-bold"
                         >Походы</span
@@ -192,6 +195,7 @@
                     <button
                       class="choose-tour__button"
                       onclick="toggleActiveButton(this)"
+                      data-target="choose-tour__rafting"
                     >
                       <span class="text text_big text_black roboto-bold"
                         >Сплавы</span
@@ -202,6 +206,7 @@
                     <button
                       class="choose-tour__button"
                       onclick="toggleActiveButton(this)"
+                      data-target="choose-tour__cycling"
                     >
                       <span class="text text_big text_black roboto-bold"
                         >Велопрогулки</span
@@ -225,12 +230,8 @@
               }
             </script>
 
-            <div class="choose-tour__cards">
-              <a
-                href="#"
-                class="choose-tour__card choose-tour__card_1 link"
-                target="_blank"
-              >
+            <div class="choose-tour__cards choose-tour__popular">
+              <div class="choose-tour__card">
                 <div class="choose-tour__card-content">
                   <h3
                     class="heading heading_3 roboto-bold responsive-font-weight"
@@ -241,16 +242,13 @@
                     от&nbsp;80&nbsp;000 руб
                   </p>
                 </div>
-                <span class="link-more text text_big text_white roboto-bold"
-                  >Подробнее</span
-                >
-              </a>
-
-              <a
-                href="#"
-                class="choose-tour__card choose-tour__card_2 link"
-                target="_blank"
-              >
+                <a href="#" class="link link_more" target="_blank">
+                  <span class="text text_big text_white roboto-bold"
+                    >Подробнее</span
+                  >
+                </a>
+              </div>
+              <div class="choose-tour__card">
                 <div class="choose-tour__card-content">
                   <h3
                     class="heading heading_3 roboto-bold responsive-font-weight"
@@ -261,16 +259,13 @@
                     от&nbsp;80&nbsp;000 руб
                   </p>
                 </div>
-                <span class="link-more text text_big text_white roboto-bold"
-                  >Подробнее</span
-                >
-              </a>
-
-              <a
-                href="#"
-                class="choose-tour__card choose-tour__card_3 link"
-                target="_blank"
-              >
+                <a href="#" class="link link_more" target="_blank">
+                  <span class="text text_big text_white roboto-bold"
+                    >Подробнее</span
+                  >
+                </a>
+              </div>
+              <div class="choose-tour__card">
                 <div class="choose-tour__card-content">
                   <h3
                     class="heading heading_3 roboto-bold responsive-font-weight"
@@ -281,16 +276,13 @@
                     от&nbsp;80&nbsp;000 руб
                   </p>
                 </div>
-                <span class="link-more text text_big text_white roboto-bold"
-                  >Подробнее</span
-                >
-              </a>
-
-              <a
-                href="#"
-                class="choose-tour__card choose-tour__card_4 link"
-                target="_blank"
-              >
+                <a href="#" class="link link_more" target="_blank">
+                  <span class="text text_big text_white roboto-bold"
+                    >Подробнее</span
+                  >
+                </a>
+              </div>
+              <div class="choose-tour__card">
                 <div class="choose-tour__card-content">
                   <h3
                     class="heading heading_3 roboto-bold responsive-font-weight"
@@ -301,16 +293,13 @@
                     от&nbsp;80&nbsp;000 руб
                   </p>
                 </div>
-                <span class="link-more text text_big text_white roboto-bold"
-                  >Подробнее</span
-                >
-              </a>
-
-              <a
-                href="#"
-                class="choose-tour__card choose-tour__card_5 link"
-                target="_blank"
-              >
+                <a href="#" class="link link_more" target="_blank">
+                  <span class="text text_big text_white roboto-bold"
+                    >Подробнее</span
+                  >
+                </a>
+              </div>
+              <div class="choose-tour__card">
                 <div class="choose-tour__card-content">
                   <h3
                     class="heading heading_3 roboto-bold responsive-font-weight"
@@ -321,16 +310,13 @@
                     от&nbsp;80&nbsp;000 руб
                   </p>
                 </div>
-                <span class="link-more text text_big text_white roboto-bold"
-                  >Подробнее</span
-                >
-              </a>
-
-              <a
-                href="#"
-                class="choose-tour__card choose-tour__card_6 link"
-                target="_blank"
-              >
+                <a href="#" class="link link_more" target="_blank">
+                  <span class="text text_big text_white roboto-bold"
+                    >Подробнее</span
+                  >
+                </a>
+              </div>
+              <div class="choose-tour__card">
                 <div class="choose-tour__card-content">
                   <h3
                     class="heading heading_3 roboto-bold responsive-font-weight"
@@ -341,11 +327,466 @@
                     от&nbsp;80&nbsp;000 руб
                   </p>
                 </div>
-                <span class="link-more text text_big text_white roboto-bold"
-                  >Подробнее</span
-                >
-              </a>
+                <a href="#" class="link link_more" target="_blank">
+                  <span class="text text_big text_white roboto-bold"
+                    >Подробнее</span
+                  >
+                </a>
+              </div>
             </div>
+
+            <div class="choose-tour__cards choose-tour__authorial hidden">
+              <div class="choose-tour__card">
+                <div class="choose-tour__card-content">
+                  <h3
+                    class="heading heading_3 roboto-bold responsive-font-weight"
+                  >
+                    Путешествие в&nbsp;горы
+                  </h3>
+                  <p class="text text_small text_white">
+                    от&nbsp;80&nbsp;000 руб
+                  </p>
+                </div>
+                <a href="#" class="link link_more" target="_blank">
+                  <span class="text text_big text_white roboto-bold"
+                    >Подробнее</span
+                  >
+                </a>
+              </div>
+              <div class="choose-tour__card">
+                <div class="choose-tour__card-content">
+                  <h3
+                    class="heading heading_3 roboto-bold responsive-font-weight"
+                  >
+                    Путешествие в&nbsp;горы
+                  </h3>
+                  <p class="text text_small text_white">
+                    от&nbsp;80&nbsp;000 руб
+                  </p>
+                </div>
+                <a href="#" class="link link_more" target="_blank">
+                  <span class="text text_big text_white roboto-bold"
+                    >Подробнее</span
+                  >
+                </a>
+              </div>
+              <div class="choose-tour__card">
+                <div class="choose-tour__card-content">
+                  <h3
+                    class="heading heading_3 roboto-bold responsive-font-weight"
+                  >
+                    Путешествие в&nbsp;горы
+                  </h3>
+                  <p class="text text_small text_white">
+                    от&nbsp;80&nbsp;000 руб
+                  </p>
+                </div>
+                <a href="#" class="link link_more" target="_blank">
+                  <span class="text text_big text_white roboto-bold"
+                    >Подробнее</span
+                  >
+                </a>
+              </div>
+              <div class="choose-tour__card">
+                <div class="choose-tour__card-content">
+                  <h3
+                    class="heading heading_3 roboto-bold responsive-font-weight"
+                  >
+                    Путешествие в&nbsp;горы
+                  </h3>
+                  <p class="text text_small text_white">
+                    от&nbsp;80&nbsp;000 руб
+                  </p>
+                </div>
+                <a href="#" class="link link_more" target="_blank">
+                  <span class="text text_big text_white roboto-bold"
+                    >Подробнее</span
+                  >
+                </a>
+              </div>
+              <div class="choose-tour__card">
+                <div class="choose-tour__card-content">
+                  <h3
+                    class="heading heading_3 roboto-bold responsive-font-weight"
+                  >
+                    Путешествие в&nbsp;горы
+                  </h3>
+                  <p class="text text_small text_white">
+                    от&nbsp;80&nbsp;000 руб
+                  </p>
+                </div>
+                <a href="#" class="link link_more" target="_blank">
+                  <span class="text text_big text_white roboto-bold"
+                    >Подробнее</span
+                  >
+                </a>
+              </div>
+              <div class="choose-tour__card">
+                <div class="choose-tour__card-content">
+                  <h3
+                    class="heading heading_3 roboto-bold responsive-font-weight"
+                  >
+                    Путешествие в&nbsp;горы
+                  </h3>
+                  <p class="text text_small text_white">
+                    от&nbsp;80&nbsp;000 руб
+                  </p>
+                </div>
+                <a href="#" class="link link_more" target="_blank">
+                  <span class="text text_big text_white roboto-bold"
+                    >Подробнее</span
+                  >
+                </a>
+              </div>
+            </div>
+
+            <div class="choose-tour__cards choose-tour__campaign hidden">
+              <div class="choose-tour__card">
+                <div class="choose-tour__card-content">
+                  <h3
+                    class="heading heading_3 roboto-bold responsive-font-weight"
+                  >
+                    Путешествие в&nbsp;горы
+                  </h3>
+                  <p class="text text_small text_white">
+                    от&nbsp;80&nbsp;000 руб
+                  </p>
+                </div>
+                <a href="#" class="link link_more" target="_blank">
+                  <span class="text text_big text_white roboto-bold"
+                    >Подробнее</span
+                  >
+                </a>
+              </div>
+              <div class="choose-tour__card">
+                <div class="choose-tour__card-content">
+                  <h3
+                    class="heading heading_3 roboto-bold responsive-font-weight"
+                  >
+                    Путешествие в&nbsp;горы
+                  </h3>
+                  <p class="text text_small text_white">
+                    от&nbsp;80&nbsp;000 руб
+                  </p>
+                </div>
+                <a href="#" class="link link_more" target="_blank">
+                  <span class="text text_big text_white roboto-bold"
+                    >Подробнее</span
+                  >
+                </a>
+              </div>
+              <div class="choose-tour__card">
+                <div class="choose-tour__card-content">
+                  <h3
+                    class="heading heading_3 roboto-bold responsive-font-weight"
+                  >
+                    Путешествие в&nbsp;горы
+                  </h3>
+                  <p class="text text_small text_white">
+                    от&nbsp;80&nbsp;000 руб
+                  </p>
+                </div>
+                <a href="#" class="link link_more" target="_blank">
+                  <span class="text text_big text_white roboto-bold"
+                    >Подробнее</span
+                  >
+                </a>
+              </div>
+              <div class="choose-tour__card">
+                <div class="choose-tour__card-content">
+                  <h3
+                    class="heading heading_3 roboto-bold responsive-font-weight"
+                  >
+                    Путешествие в&nbsp;горы
+                  </h3>
+                  <p class="text text_small text_white">
+                    от&nbsp;80&nbsp;000 руб
+                  </p>
+                </div>
+                <a href="#" class="link link_more" target="_blank">
+                  <span class="text text_big text_white roboto-bold"
+                    >Подробнее</span
+                  >
+                </a>
+              </div>
+              <div class="choose-tour__card">
+                <div class="choose-tour__card-content">
+                  <h3
+                    class="heading heading_3 roboto-bold responsive-font-weight"
+                  >
+                    Путешествие в&nbsp;горы
+                  </h3>
+                  <p class="text text_small text_white">
+                    от&nbsp;80&nbsp;000 руб
+                  </p>
+                </div>
+                <a href="#" class="link link_more" target="_blank">
+                  <span class="text text_big text_white roboto-bold"
+                    >Подробнее</span
+                  >
+                </a>
+              </div>
+              <div class="choose-tour__card">
+                <div class="choose-tour__card-content">
+                  <h3
+                    class="heading heading_3 roboto-bold responsive-font-weight"
+                  >
+                    Путешествие в&nbsp;горы
+                  </h3>
+                  <p class="text text_small text_white">
+                    от&nbsp;80&nbsp;000 руб
+                  </p>
+                </div>
+                <a href="#" class="link link_more" target="_blank">
+                  <span class="text text_big text_white roboto-bold"
+                    >Подробнее</span
+                  >
+                </a>
+              </div>
+            </div>
+
+            <div class="choose-tour__cards choose-tour__rafting hidden">
+              <div class="choose-tour__card">
+                <div class="choose-tour__card-content">
+                  <h3
+                    class="heading heading_3 roboto-bold responsive-font-weight"
+                  >
+                    Путешествие в&nbsp;горы
+                  </h3>
+                  <p class="text text_small text_white">
+                    от&nbsp;80&nbsp;000 руб
+                  </p>
+                </div>
+                <a href="#" class="link link_more" target="_blank">
+                  <span class="text text_big text_white roboto-bold"
+                    >Подробнее</span
+                  >
+                </a>
+              </div>
+              <div class="choose-tour__card">
+                <div class="choose-tour__card-content">
+                  <h3
+                    class="heading heading_3 roboto-bold responsive-font-weight"
+                  >
+                    Путешествие в&nbsp;горы
+                  </h3>
+                  <p class="text text_small text_white">
+                    от&nbsp;80&nbsp;000 руб
+                  </p>
+                </div>
+                <a href="#" class="link link_more" target="_blank">
+                  <span class="text text_big text_white roboto-bold"
+                    >Подробнее</span
+                  >
+                </a>
+              </div>
+              <div class="choose-tour__card">
+                <div class="choose-tour__card-content">
+                  <h3
+                    class="heading heading_3 roboto-bold responsive-font-weight"
+                  >
+                    Путешествие в&nbsp;горы
+                  </h3>
+                  <p class="text text_small text_white">
+                    от&nbsp;80&nbsp;000 руб
+                  </p>
+                </div>
+                <a href="#" class="link link_more" target="_blank">
+                  <span class="text text_big text_white roboto-bold"
+                    >Подробнее</span
+                  >
+                </a>
+              </div>
+              <div class="choose-tour__card">
+                <div class="choose-tour__card-content">
+                  <h3
+                    class="heading heading_3 roboto-bold responsive-font-weight"
+                  >
+                    Путешествие в&nbsp;горы
+                  </h3>
+                  <p class="text text_small text_white">
+                    от&nbsp;80&nbsp;000 руб
+                  </p>
+                </div>
+                <a href="#" class="link link_more" target="_blank">
+                  <span class="text text_big text_white roboto-bold"
+                    >Подробнее</span
+                  >
+                </a>
+              </div>
+              <div class="choose-tour__card">
+                <div class="choose-tour__card-content">
+                  <h3
+                    class="heading heading_3 roboto-bold responsive-font-weight"
+                  >
+                    Путешествие в&nbsp;горы
+                  </h3>
+                  <p class="text text_small text_white">
+                    от&nbsp;80&nbsp;000 руб
+                  </p>
+                </div>
+                <a href="#" class="link link_more" target="_blank">
+                  <span class="text text_big text_white roboto-bold"
+                    >Подробнее</span
+                  >
+                </a>
+              </div>
+              <div class="choose-tour__card">
+                <div class="choose-tour__card-content">
+                  <h3
+                    class="heading heading_3 roboto-bold responsive-font-weight"
+                  >
+                    Путешествие в&nbsp;горы
+                  </h3>
+                  <p class="text text_small text_white">
+                    от&nbsp;80&nbsp;000 руб
+                  </p>
+                </div>
+                <a href="#" class="link link_more" target="_blank">
+                  <span class="text text_big text_white roboto-bold"
+                    >Подробнее</span
+                  >
+                </a>
+              </div>
+            </div>
+
+            <div class="choose-tour__cards choose-tour__cycling hidden">
+              <div class="choose-tour__card">
+                <div class="choose-tour__card-content">
+                  <h3
+                    class="heading heading_3 roboto-bold responsive-font-weight"
+                  >
+                    Путешествие в&nbsp;горы
+                  </h3>
+                  <p class="text text_small text_white">
+                    от&nbsp;80&nbsp;000 руб
+                  </p>
+                </div>
+                <a href="#" class="link link_more" target="_blank">
+                  <span class="text text_big text_white roboto-bold"
+                    >Подробнее</span
+                  >
+                </a>
+              </div>
+              <div class="choose-tour__card">
+                <div class="choose-tour__card-content">
+                  <h3
+                    class="heading heading_3 roboto-bold responsive-font-weight"
+                  >
+                    Путешествие в&nbsp;горы
+                  </h3>
+                  <p class="text text_small text_white">
+                    от&nbsp;80&nbsp;000 руб
+                  </p>
+                </div>
+                <a href="#" class="link link_more" target="_blank">
+                  <span class="text text_big text_white roboto-bold"
+                    >Подробнее</span
+                  >
+                </a>
+              </div>
+              <div class="choose-tour__card">
+                <div class="choose-tour__card-content">
+                  <h3
+                    class="heading heading_3 roboto-bold responsive-font-weight"
+                  >
+                    Путешествие в&nbsp;горы
+                  </h3>
+                  <p class="text text_small text_white">
+                    от&nbsp;80&nbsp;000 руб
+                  </p>
+                </div>
+                <a href="#" class="link link_more" target="_blank">
+                  <span class="text text_big text_white roboto-bold"
+                    >Подробнее</span
+                  >
+                </a>
+              </div>
+              <div class="choose-tour__card">
+                <div class="choose-tour__card-content">
+                  <h3
+                    class="heading heading_3 roboto-bold responsive-font-weight"
+                  >
+                    Путешествие в&nbsp;горы
+                  </h3>
+                  <p class="text text_small text_white">
+                    от&nbsp;80&nbsp;000 руб
+                  </p>
+                </div>
+                <a href="#" class="link link_more" target="_blank">
+                  <span class="text text_big text_white roboto-bold"
+                    >Подробнее</span
+                  >
+                </a>
+              </div>
+              <div class="choose-tour__card">
+                <div class="choose-tour__card-content">
+                  <h3
+                    class="heading heading_3 roboto-bold responsive-font-weight"
+                  >
+                    Путешествие в&nbsp;горы
+                  </h3>
+                  <p class="text text_small text_white">
+                    от&nbsp;80&nbsp;000 руб
+                  </p>
+                </div>
+                <a href="#" class="link link_more" target="_blank">
+                  <span class="text text_big text_white roboto-bold"
+                    >Подробнее</span
+                  >
+                </a>
+              </div>
+              <div class="choose-tour__card">
+                <div class="choose-tour__card-content">
+                  <h3
+                    class="heading heading_3 roboto-bold responsive-font-weight"
+                  >
+                    Путешествие в&nbsp;горы
+                  </h3>
+                  <p class="text text_small text_white">
+                    от&nbsp;80&nbsp;000 руб
+                  </p>
+                </div>
+                <a href="#" class="link link_more" target="_blank">
+                  <span class="text text_big text_white roboto-bold"
+                    >Подробнее</span
+                  >
+                </a>
+              </div>
+            </div>
+
+            <script>
+              document
+                .querySelectorAll(".choose-tour__card")
+                .forEach((card) => {
+                  card.onclick = (event) => {
+                    window.open(
+                      card.querySelector(".link_more").href,
+                      "_blank"
+                    );
+                  };
+                });
+            </script>
+
+            <script>
+              const buttons = document.querySelectorAll(".choose-tour__button");
+
+              buttons.forEach((button) => {
+                button.addEventListener("click", () => {
+                  const target = button.getAttribute("data-target");
+                  console.log(target);
+
+                  document
+                    .querySelectorAll(".choose-tour__cards")
+                    .forEach((card) => {
+                      card.classList.add("hidden");
+                    });
+
+                  const activeCard = document.querySelector(`.${target}`);
+                  activeCard.classList.remove("hidden");
+                });
+              });
+            </script>
           </section>
 
           <section id="collect-tour" class="section collect-tour">
@@ -820,7 +1261,7 @@
                 </div>
 
                 <div class="stories__links">
-                  <a href="#" class="link link-more" target="_blank"
+                  <a href="#" class="link link_more" target="_blank"
                     ><span class="text text_white text_big roboto-bold"
                       >Подробнее</span
                     >
@@ -857,7 +1298,7 @@
                 </div>
 
                 <div class="stories__links">
-                  <a href="#" class="link link-more" target="_blank"
+                  <a href="#" class="link link_more" target="_blank"
                     ><span class="text text_white text_big roboto-bold"
                       >Подробнее</span
                     >
@@ -891,7 +1332,7 @@
                 </div>
 
                 <div class="stories__links">
-                  <a href="#" class="link link-more" target="_blank"
+                  <a href="#" class="link link_more" target="_blank"
                     ><span class="text text_white text_big roboto-bold"
                       >Подробнее</span
                     >
@@ -916,7 +1357,7 @@
                   card.onclick = (event) => {
                     if (!event.target.closest(".stories__social-links")) {
                       window.open(
-                        card.querySelector(".link-more").href,
+                        card.querySelector(".link_more").href,
                         "_blank"
                       );
                     }
