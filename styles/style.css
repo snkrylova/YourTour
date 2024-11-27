@@ -369,6 +369,12 @@ ul {
   }
 }
 
+@media (min-width: 1920px) {
+  .hero .intro-section__text {
+    max-width: 562px;
+  }
+}
+
 /* header start */
 
 .header {
