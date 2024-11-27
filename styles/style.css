@@ -741,8 +741,8 @@ ul {
     gap: 30px;
   }
 
-  .choose-tour__button::before {
-    margin-top: 6px;
+  .choose-tour__button {
+    padding-bottom: 6px;
   }
 
   .choose-tour__cards {
