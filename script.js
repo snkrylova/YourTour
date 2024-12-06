@@ -11,9 +11,6 @@ const storiesCard = document.querySelectorAll(".stories__card");
 const responsiveFontElements = document.querySelectorAll(
   ".responsive-font-weight"
 );
-const travelerPhotoImg = document.querySelectorAll(
-  ".reviews__traveler-photo-img"
-);
 
 const tourCard1 = document.querySelector(".choose-tour__popular");
 const tourCard2 = document.querySelector(".choose-tour__authorial");
@@ -82,12 +79,6 @@ phoneInput.addEventListener("input", function () {
       return formatted;
     }
   );
-});
-
-travelerPhotoImg.forEach((photo) => {
-  photo.addEventListener("error", () => {
-    photo.style.display = "none";
-  });
 });
 
 storiesCard.forEach((card) => {
