@@ -33,6 +33,12 @@
     />
     <link rel="stylesheet" href="styles/fonts.css" />
     <link rel="stylesheet" href="styles/style.css" />
+
+    <script src="js/update_font_weight.js" defer></script>
+    <script src="js/fixed_header.js" defer></script>
+    <script src="js/choose_tour.js" defer></script>
+    <script src="js/collect_tour.js" defer></script>
+    <script src="js/stories.js" defer></script>
   </head>
 
   <body class="roboto-regular">
@@ -673,6 +679,7 @@
             method="post"
             name="collectTourForm"
             autocomplete="on"
+            novalidate
           >
             <fieldset class="form__group">
               <label class="form__element text text_black">
@@ -680,56 +687,93 @@
                 <input
                   type="text"
                   name="name"
-                  class="form__input-field text text_gray"
+                  class="form__input-field form__name text text_gray"
                   placeholder="Введите Ваше имя"
+                  title="Имя должно содержать только буквы латиницы или кириллицы"
+                  pattern="[A-Za-zА-Яа-яЁё]+"
                   required
               /></label>
+
+              <p class="error-message">
+                Имя должно содержать только буквы латиницы или кириллицы
+              </p>
             </fieldset>
-            <fieldset class="form__group form__element">
-              <label for="form__select" class="text text_black"
-                >Направление</label
-              >
-              <div class="form__custom-select text text_black">
-                <select
-                  name="destinationTour"
-                  class="form__input-field form__select"
-                  id="form__select"
-                  required
-                >
-                  <option value="" disabled selected hidden>
+
+            <fieldset class="form__group">
+              <div class="form__element">
+                <p class="text text_black">Направление</p>
+                <div class="form__input-field form__custom-select">
+                  <button class="form__dropdown-button text text_gray">
                     Куда хотите ехать
-                  </option>
-                  <option value="1">Тур 1</option>
-                  <option value="2">Тур 2</option>
-                  <option value="3">Тур 3</option>
-                </select>
-                <span class="arrow-down">
-                  <svg
-                    viewBox="0 0 26 26"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M13 19.4143L4.29289 10.7072C3.90236 10.3167 3.90237 9.68351 4.29289 9.29298C4.68341 8.90246 5.31658 8.90246 5.7071 9.29298L13 16.5859L20.2929 9.29298C20.6834 8.90246 21.3166 8.90246 21.7071 9.29298C22.0976 9.68351 22.0976 10.3167 21.7071 10.7072L13 19.4143Z"
-                      fill="#1B1F2B"
-                    />
-                  </svg>
-                </span>
+                  </button>
+                  <div class="form__dropdown-content">
+                    <div
+                      data-value="1"
+                      class="form__dropdown-item text text_black"
+                    >
+                      Тур 1
+                    </div>
+                    <div
+                      data-value="2"
+                      class="form__dropdown-item text text_black"
+                    >
+                      Тур 2
+                    </div>
+                    <div
+                      data-value="3"
+                      class="form__dropdown-item text text_black"
+                    >
+                      Тур 3
+                    </div>
+                    <div
+                      data-value="4"
+                      class="form__dropdown-item text text_black"
+                    >
+                      Тур 4
+                    </div>
+                    <div
+                      data-value="5"
+                      class="form__dropdown-item text text_black"
+                    >
+                      Тур 5
+                    </div>
+                  </div>
+                  <span class="arrow-down">
+                    <svg
+                      viewBox="0 0 26 26"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M13 19.4143L4.29289 10.7072C3.90236 10.3167 3.90237 9.68351 4.29289 9.29298C4.68341 8.90246 5.31658 8.90246 5.7071 9.29298L13 16.5859L20.2929 9.29298C20.6834 8.90246 21.3166 8.90246 21.7071 9.29298C22.0976 9.68351 22.0976 10.3167 21.7071 10.7072L13 19.4143Z"
+                        fill="#1B1F2B"
+                      />
+                    </svg>
+                  </span>
+                </div>
               </div>
+
+              <p class="error-message">Выберите значение из списка</p>
             </fieldset>
+
             <fieldset class="form__group">
               <label class="form__element text text_black">
                 Email
                 <input
                   type="email"
                   name="email"
-                  class="form__input-field text text_gray"
+                  class="form__input-field form__email text text_gray"
                   placeholder="example@mail.com"
+                  title="Адрес электронной почты должен содержать латинские буквы, символ @ и домен (например: example@mail.com)."
+                  pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
                   required
                 />
               </label>
+              <p class="error-message">
+                Email должен содержать только буквы латиницы, '@' и доменное имя
+              </p>
             </fieldset>
 
             <fieldset class="form__group">
@@ -738,34 +782,49 @@
                 <input
                   type="tel"
                   name="tel"
-                  class="form__input-field text text_gray"
+                  class="form__input-field form__tel text text_gray"
                   placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _"
+                  pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
+                  title="Телефонный номер имеет формат: +7 (XXX) XXX-XX-XX"
                   maxlength="18"
                   required
                 />
               </label>
+              <p class="error-message">Ожидаемый ввод: +7 (XXX) XXX-XX-XX</p>
             </fieldset>
 
             <fieldset class="form__group">
               <label class="form__element text text_black">
                 Дата от
                 <input
-                  type="date"
-                  name="date-from"
-                  class="form__input-field form__input-date text text_gray"
+                  type="text"
+                  name="date"
+                  class="form__input-field form__input-date form__input-date_start text text_gray"
+                  data-field="startDate"
+                  placeholder="ДД.MM.ГГГГ"
+                  pattern="\d{2}.\d{2}.\d{4}"
                   required
               /></label>
+
+              <p class="error-message">Ожидаемый ввод: ДД.ММ.ГГГГ</p>
             </fieldset>
+
             <fieldset class="form__group">
               <label class="form__element text text_black">
                 Дата до
                 <input
-                  type="date"
-                  name="date-before"
-                  class="form__input-field form__input-date text text_gray"
+                  type="text"
+                  name="date"
+                  class="form__input-field form__input-date form__input-date_end text text_gray"
+                  data-field="endDate"
+                  placeholder="ДД.MM.ГГГГ"
+                  pattern="\d{2}.\d{2}.\d{4}"
                   required
               /></label>
+
+              <p class="error-message">Ожидаемый ввод: ДД.ММ.ГГГГ</p>
             </fieldset>
+
             <fieldset class="form__group form__container-comment">
               <label class="form__element text text_black">
                 Комментарий
@@ -775,12 +834,18 @@
                 ></textarea>
               </label>
             </fieldset>
+
             <fieldset class="form__group form__container-radio-buttons">
               <div class="form__element">
                 <label class="text text_black">Вам есть 18 лет?</label>
                 <div class="form__radio-buttons">
                   <label class="form__radio-button text text_black"
-                    ><input type="radio" name="age" value="yes" />
+                    ><input
+                      type="radio"
+                      class="form__radio-input"
+                      name="age"
+                      value="yes"
+                    />
                     <span class="form__custom-radio-button">
                       <svg
                         viewBox="0 0 26 26"
@@ -805,7 +870,12 @@
                     Да</label
                   >
                   <label class="form__radio-button text text_black"
-                    ><input type="radio" name="age" value="no" />
+                    ><input
+                      type="radio"
+                      class="form__radio-input"
+                      name="age"
+                      value="no"
+                    />
                     <span class="form__custom-radio-button">
                       <svg
                         viewBox="0 0 26 26"
@@ -831,10 +901,20 @@
                   >
                 </div>
               </div>
+
+              <p class="error-message">
+                Выберите один из предложенных вариантов
+              </p>
             </fieldset>
+
             <fieldset class="form__group form__container-checkbox">
               <label class="form__checkbox text text_gray">
-                <input type="checkbox" name="license-agreement" required />
+                <input
+                  type="checkbox"
+                  class="form__checkbox-input"
+                  name="license-agreement"
+                  required
+                />
                 <span class="form__custom-checkbox">
                   <svg
                     viewBox="0 0 26 26"
@@ -856,6 +936,7 @@
                     />
                   </svg>
                 </span>
+
                 <span class="text text_small text_gray">
                   Нажимая кнопку, я принимаю условия
                   <a href="#" class="link link_black">
@@ -865,14 +946,17 @@
                   </a>
                 </span></label
               >
+
+              <p class="error-message">Пожалуйста, подтвердите своё согласие</p>
             </fieldset>
+
             <fieldset class="form__group form__container-buttons">
               <div class="form__buttons">
                 <button
                   type="submit"
                   class="form__button form__button_submit text"
                 >
-                  Найти тур
+                  Найти&nbsp;тур
                 </button>
                 <button
                   type="reset"
@@ -1273,7 +1357,5 @@
         </ul>
       </div>
     </footer>
-
-    <script src="script.js"></script>
   </body>
 </html>
