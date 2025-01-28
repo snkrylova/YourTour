@@ -464,27 +464,27 @@ ul {
 }
 
 .choose-tour__card:nth-child(1) {
-  background-image: url("/assets/images/card_tour_photo_1.jpg");
+  background-image: url("../assets/images/card_tour_photo_1.jpg");
 }
 
 .choose-tour__card:nth-child(2) {
-  background-image: url("/assets/images/card_tour_photo_2.jpg");
+  background-image: url("../assets/images/card_tour_photo_2.jpg");
 }
 
 .choose-tour__card:nth-child(3) {
-  background-image: url("/assets/images/card_tour_photo_3.jpg");
+  background-image: url("../assets/images/card_tour_photo_3.jpg");
 }
 
 .choose-tour__card:nth-child(4) {
-  background-image: url("/assets/images/card_tour_photo_4.jpg");
+  background-image: url("../assets/images/card_tour_photo_4.jpg");
 }
 
 .choose-tour__card:nth-child(5) {
-  background-image: url("/assets/images/card_tour_photo_5.jpg");
+  background-image: url("../assets/images/card_tour_photo_5.jpg");
 }
 
 .choose-tour__card:nth-child(6) {
-  background-image: url("/assets/images/card_tour_photo_6.jpg");
+  background-image: url("../assets/images/card_tour_photo_6.jpg");
 }
 
 .choose-tour__card-content {
