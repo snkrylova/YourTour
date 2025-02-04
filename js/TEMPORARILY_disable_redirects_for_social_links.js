@@ -1,13 +1,11 @@
 "use strict";
 
-const linksContainers = document.querySelectorAll('[class*="__social-links"]');
+const linksContainers = document.querySelectorAll(
+  '[class*="social-link"], .link_more'
+);
 
-linksContainers.forEach((linksContainer) => {
-  const links = linksContainer.querySelectorAll(".link");
-
-  links.forEach((link) => {
-    link.addEventListener("click", function (event) {
-      event.preventDefault();
-    });
+linksContainers.forEach((link) => {
+  link.addEventListener("click", function (event) {
+    event.preventDefault();
   });
 });
